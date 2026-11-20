@@ -65,7 +65,35 @@ Requires Node.js >= 22.14, pnpm (the version in `package.json` `packageManager`)
 
    Without a terminal (CI, piped output) `pnpm dev` also falls back to plain lines.
 
-   If something does not start, run `pnpm doctor` (see below).
+   If something does not start, run `pnpm dev:doctor` (see below).
+
+### Checking your setup: `pnpm dev:doctor`
+
+```sh
+pnpm dev:doctor
+```
+
+Prints one line per check and exits with code 1 if any fails:
+
+```text
+✓ .env found
+✗ Postgres not reachable at localhost:5432 (ECONNREFUSED)
+    → Is Postgres running? Start the services with: docker compose up -d --wait
+✓ Mailpit SMTP answering at 127.0.0.1:1025
+✓ Mailpit web UI ready at http://127.0.0.1:8025
+✓ Port 3000 (web) is free
+✓ Port 4000 (API) is free
+```
+
+It checks that `.env` exists, that Postgres answers `SELECT 1` (`DATABASE_URL`), that Mailpit's
+SMTP server greets (`SMTP_HOST`/`SMTP_PORT`), that the Mailpit web UI is ready
+(`MAILPIT_API_URL`), and that ports 3000 (web) and `API_PORT` (default 4000) are free. It reads
+`.env` and your shell environment but never prints their values. If you change Docker's ports
+(`MAILPIT_SMTP_PORT`, `MAILPIT_HTTP_PORT`, `POSTGRES_PORT`), also change `SMTP_PORT`,
+`MAILPIT_API_URL` and `DATABASE_URL` to match, otherwise the API talks to the wrong port.
+
+It is `dev:doctor` and not `doctor` because `pnpm doctor` is a built-in pnpm command (it checks
+pnpm's own installation) and runs instead of a script with that name.
 
 ### Logging
 
