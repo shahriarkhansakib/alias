@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/admin/communication/cron",
+      "schedule": "* * * * *"
+    }
+  ]
+}

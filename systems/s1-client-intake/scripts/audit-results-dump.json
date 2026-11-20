@@ -1,0 +1,1252 @@
+[
+  {
+    "campaignIndex": 1,
+    "name": "Urban Style Winter Streetwear Launch",
+    "clientId": "6af8af2636ccf4e8218b3454",
+    "campaignId": "6af8af2636ccf4e8218b3455",
+    "company": "Urban Style",
+    "industry": "Fashion E-commerce / Streetwear Apparel",
+    "location": "Dhaka & Major Cities, Bangladesh",
+    "durationMs": 1060,
+    "dossier": {
+      "artifact_id": "artifact_2",
+      "type": "research_enrichment",
+      "campaign_id": "",
+      "version": "1.0",
+      "business_name": "Urban Style",
+      "industry": "Fashion E-commerce / Streetwear Apparel",
+      "campaign_profile": {
+        "business_name": "Urban Style",
+        "industry": "Fashion E-commerce / Streetwear Apparel",
+        "business_model_hint": "CONSUMER_RETAIL_D2C",
+        "campaign_objective": "Commercial Growth",
+        "campaign_type": "General Campaign",
+        "geography": "Dhaka & Major Cities, Bangladesh",
+        "target_audience": "University students and urban young professionals seeking modern streetwear",
+        "budget_level": "Unspecified",
+        "duration": "Standard",
+        "research_depth": "COMPREHENSIVE",
+        "selected_categories": [
+          "Industry Landscape & Market Dynamics",
+          "Consumer Buying Behavior & Seasonal Trends",
+          "Direct Merchant Competition & Catalog Pricing",
+          "Payment Reliability & Risk Mitigation",
+          "Social Commerce & Acquisition Channels"
+        ],
+        "generated_queries": [
+          "Fashion Ecommerce  Streetwear Apparel market dynamics Dhaka  Major Cities Bangladesh",
+          "DropShoulder Streetwear Tshirts  Heavyweight Fleece Hoodies customer demand Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel DropShoulder Streetwear Tshirts  Heavyweight Fleece Hoodies competitors Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel pricing and business offers Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel digital acquisition channels Dhaka  Major Cities Bangladesh"
+        ]
+      },
+      "research_status": "PARTIALLY_COMPLETED",
+      "completion_date": "2026-11-14",
+      "categories_completed": [
+        "Industry Landscape & Market Dynamics",
+        "Consumer Buying Behavior & Seasonal Trends",
+        "Direct Merchant Competition & Catalog Pricing",
+        "Payment Reliability & Risk Mitigation",
+        "Social Commerce & Acquisition Channels"
+      ],
+      "findings": [
+        {
+          "finding_id": "FND-001",
+          "category": "Industry Landscape & Market Dynamics",
+          "title": "Industry Landscape & Market Dynamics — Urban Style",
+          "claim": "The Fashion E-commerce / Streetwear Apparel sector represents an established commercial category in Dhaka & Major Cities, Bangladesh, characterized by active market demand for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies.",
+          "explanation": "Documented regional trade references confirm existing commercial activity and distribution channels for Urban Style.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-002",
+          "category": "Consumer Buying Behavior & Seasonal Trends",
+          "title": "Consumer Buying Behavior & Seasonal Trends — Urban Style",
+          "claim": "Consumer purchasing in Dhaka & Major Cities, Bangladesh is influenced by expanding digital discovery channels, lifestyle alignment, and accessible local purchasing options.",
+          "explanation": "Purchasing momentum builds when brand presentation aligns with seasonal lifestyle demands and transparent product expectations.",
+          "evidence_excerpt": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-003",
+          "category": "Direct Merchant Competition & Catalog Pricing",
+          "title": "Direct Merchant Competition & Catalog Pricing — Urban Style",
+          "claim": "Commercial pricing and offer adoption for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies in Dhaka & Major Cities, Bangladesh is optimized when value metrics are transparent and aligned with customer budgets.",
+          "explanation": "Value-based pricing structures combined with risk-reducing guarantees or introductory incentives accelerate customer sign-up.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-004",
+          "category": "Payment Reliability & Risk Mitigation",
+          "title": "Payment Reliability & Risk Mitigation — Urban Style",
+          "claim": "Operational delivery for Urban Style in Dhaka & Major Cities, Bangladesh requires proactive risk mitigation regarding customer commitment, service delivery, and market volatility.",
+          "explanation": "Establishing clear communication, transparent customer expectations, and standard service protocols mitigates typical operational risks.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-005",
+          "category": "Social Commerce & Acquisition Channels",
+          "title": "Social Commerce & Acquisition Channels — Urban Style",
+          "claim": "Target audience discovery for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies in Dhaka & Major Cities, Bangladesh centers on digital platforms and direct engagement channels aligned with Commercial Growth.",
+          "explanation": "Effective marketing deploys audience-specific creatives and clear calls-to-action tailored to the primary discovery medium.",
+          "evidence_excerpt": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Fabrilife",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "Yellow Clothing",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "Artisan Outfits",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-001",
+          "title": "Page Not Found",
+          "publisher": "en.wikipedia.org",
+          "domain": "en.wikipedia.org",
+          "original_url": "https://en.wikipedia.org/wiki/Fashion_E_commerce_Streetwear_Apparel",
+          "final_url": "https://en.wikipedia.org/wiki/Fashion_E_commerce_Streetwear_Apparel",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 404,
+          "validation_status": "BROKEN",
+          "source_type": "Tertiary Reference (Wikipedia)",
+          "source_tier": "TERTIARY",
+          "evidence_excerpt": "The requested page returned HTTP 404.",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://en.wikipedia.org/wiki/Fashion_E_commerce_Streetwear_Apparel"
+          ],
+          "content_snippet": "The requested page returned HTTP 404."
+        },
+        {
+          "source_id": "SRC-002",
+          "title": "Business",
+          "publisher": "The Daily Star",
+          "domain": "thedailystar.net",
+          "original_url": "https://www.thedailystar.net/business",
+          "final_url": "https://www.thedailystar.net/business",
+          "published_date": "2026-11-14",
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "Reputable News Media",
+          "source_tier": "SECONDARY",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://www.thedailystar.net/business"
+          ],
+          "content_snippet": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In"
+        },
+        {
+          "source_id": "SRC-003",
+          "title": "Business - Dhaka Tribune",
+          "publisher": "Dhaka Tribune",
+          "domain": "dhakatribune.com",
+          "original_url": "https://www.dhakatribune.com/business",
+          "final_url": "https://www.dhakatribune.com/business",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "Reputable News Media",
+          "source_tier": "SECONDARY",
+          "evidence_excerpt": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://www.dhakatribune.com/business"
+          ],
+          "content_snippet": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba"
+        }
+      ],
+      "stats": {
+        "total_sources": 3,
+        "verified_sources": 2,
+        "unverified_sources": 1,
+        "primary_sources": 0,
+        "secondary_sources": 2,
+        "tertiary_sources": 0,
+        "total_findings": 5,
+        "verified_findings": 0,
+        "partially_verified_findings": 0,
+        "unverified_findings": 5,
+        "contradicted_findings": 0,
+        "completion_rate_percent": 67
+      },
+      "search_provider_status": {
+        "active_provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "is_live_search_available": false,
+        "missing_credentials": [
+          "TAVILY_API_KEY",
+          "SERPAPI_API_KEY",
+          "BRAVE_API_KEY"
+        ],
+        "provider_notes": "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Using validated institutional references and public knowledge endpoints. Commercial statistics must be verified with primary trade sources."
+      },
+      "limitations": [
+        "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Research was conducted using reference knowledge bases and public news indices. Findings are directional."
+      ],
+      "provider_metadata": {
+        "provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "queries_executed": [
+          "Fashion Ecommerce  Streetwear Apparel market dynamics Dhaka  Major Cities Bangladesh",
+          "DropShoulder Streetwear Tshirts  Heavyweight Fleece Hoodies customer demand Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel DropShoulder Streetwear Tshirts  Heavyweight Fleece Hoodies competitors Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel pricing and business offers Dhaka  Major Cities Bangladesh",
+          "Fashion Ecommerce  Streetwear Apparel digital acquisition channels Dhaka  Major Cities Bangladesh"
+        ],
+        "generated_at": "2026-11-14T18:57:43.690Z",
+        "version": "1.0"
+      },
+      "market_research": {
+        "overview": "Documented regional trade references confirm existing commercial activity and distribution channels for Urban Style.",
+        "market_size": "Commercial category in Dhaka & Major Cities, Bangladesh with active demand",
+        "growth": "Ongoing sector development reported in regional business media",
+        "trends": [],
+        "opportunities": [
+          "Commercial pricing and offer adoption for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies in Dhaka & Major Cities, Bangladesh is optimized when value metrics are transparent and aligned with customer budgets.",
+          "Operational delivery for Urban Style in Dhaka & Major Cities, Bangladesh requires proactive risk mitigation regarding customer commitment, service delivery, and market volatility.",
+          "Target audience discovery for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies in Dhaka & Major Cities, Bangladesh centers on digital platforms and direct engagement channels aligned with Commercial Growth."
+        ],
+        "risks": [
+          "Operational delivery for Urban Style in Dhaka & Major Cities, Bangladesh requires proactive risk mitigation regarding customer commitment, service delivery, and market volatility."
+        ]
+      },
+      "competitor_research": [
+        {
+          "name": "Fabrilife",
+          "website": "",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "Yellow Clothing",
+          "website": "",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "Artisan Outfits",
+          "website": "",
+          "products": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        }
+      ],
+      "audience_research": {
+        "demographics": [
+          "University students and urban young professionals seeking modern streetwear"
+        ],
+        "interests": [
+          "Fashion E-commerce / Streetwear Apparel solutions",
+          "Quality service"
+        ],
+        "behaviors": [
+          "Digital discovery",
+          "Evaluation of alternatives"
+        ],
+        "pain_points": [
+          "Value uncertainty",
+          "Onboarding friction"
+        ],
+        "motivations": [
+          "Demonstrated utility",
+          "Reliable support"
+        ],
+        "buying_patterns": [
+          "Active evaluation period"
+        ],
+        "platform_usage": [
+          "Digital discovery channels",
+          "Direct consultation"
+        ]
+      },
+      "platform_research": [
+        {
+          "platform": "Primary Digital Channels",
+          "suitability_score": "9.0 / 10",
+          "recommended_content": "Targeted messaging highlighting Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies value proposition",
+          "formats": [
+            "Search & Discovery Ads",
+            "Direct Response Ads"
+          ],
+          "best_practices": [
+            "Clear value proposition",
+            "Direct call-to-action"
+          ]
+        }
+      ],
+      "pricing_research": {
+        "market_price_range": "1450",
+        "competitor_prices": [
+          {
+            "item": "Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies",
+            "price": "Public catalog pricing"
+          }
+        ],
+        "common_offers": [
+          "Winter Drop 2026: Buy 2 Get Free Express Delivery Across Bangladesh"
+        ],
+        "discount_patterns": [
+          "Promotional incentives",
+          "Value bundles"
+        ]
+      },
+      "trends_and_opportunities": {
+        "content_trends": [
+          "Direct problem-solution messaging",
+          "Verified customer outcomes"
+        ],
+        "consumer_trends": [
+          "Demand for transparent pricing and reliability"
+        ],
+        "seasonal_trends": [
+          "Periodic campaign peaks"
+        ],
+        "opportunities": [
+          "Establish market leadership in Dhaka & Major Cities, Bangladesh for Drop-Shoulder Streetwear T-shirts & Heavyweight Fleece Hoodies"
+        ]
+      }
+    }
+  },
+  {
+    "campaignIndex": 2,
+    "name": "Bella Italia Banani Grand Opening",
+    "clientId": "6af8af2736ccf4e8218b3459",
+    "campaignId": "6af8af2736ccf4e8218b345a",
+    "company": "Bella Italia Trattoria",
+    "industry": "Food & Beverage / Restaurant & Hospitality",
+    "location": "Banani, Gulshan & Baridhara, Dhaka, Bangladesh",
+    "durationMs": 563,
+    "dossier": {
+      "artifact_id": "artifact_2",
+      "type": "research_enrichment",
+      "campaign_id": "",
+      "version": "1.0",
+      "business_name": "Bella Italia Trattoria",
+      "industry": "Food & Beverage / Restaurant & Hospitality",
+      "campaign_profile": {
+        "business_name": "Bella Italia Trattoria",
+        "industry": "Food & Beverage / Restaurant & Hospitality",
+        "business_model_hint": "LOCAL_HOSPITALITY_DINING",
+        "campaign_objective": "Commercial Growth",
+        "campaign_type": "General Campaign",
+        "geography": "Banani, Gulshan & Baridhara, Dhaka, Bangladesh",
+        "target_audience": "Affluent food enthusiasts, families, and young professionals looking for authentic Italian dining",
+        "budget_level": "Unspecified",
+        "duration": "Standard",
+        "research_depth": "COMPREHENSIVE",
+        "selected_categories": [
+          "Industry Landscape & Market Dynamics",
+          "Dining Trends & Cuisine Preferences",
+          "Local Competing Venues & Differentiation",
+          "Menu Pricing & Promotional Offers",
+          "Local Footfall, Booking & Discovery Channels"
+        ],
+        "generated_queries": [
+          "Food  Beverage  Restaurant  Hospitality market dynamics Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Woodfired Neapolitan Pizza Handmade Tagliatelle  Tiramisu customer demand Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality Woodfired Neapolitan Pizza Handmade Tagliatelle  Tiramisu competitors Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality pricing and business offers Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality digital acquisition channels Banani Gulshan  Baridhara Dhaka Bangladesh"
+        ]
+      },
+      "research_status": "PARTIALLY_COMPLETED",
+      "completion_date": "2026-11-14",
+      "categories_completed": [
+        "Industry Landscape & Market Dynamics",
+        "Dining Trends & Cuisine Preferences",
+        "Local Competing Venues & Differentiation",
+        "Menu Pricing & Promotional Offers",
+        "Local Footfall, Booking & Discovery Channels"
+      ],
+      "findings": [
+        {
+          "finding_id": "FND-001",
+          "category": "Industry Landscape & Market Dynamics",
+          "title": "Industry Landscape & Market Dynamics — Bella Italia Trattoria",
+          "claim": "The Food & Beverage / Restaurant & Hospitality sector represents an established commercial category in Banani, Gulshan & Baridhara, Dhaka, Bangladesh, characterized by active market demand for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu.",
+          "explanation": "Documented regional trade references confirm existing commercial activity and distribution channels for Bella Italia Trattoria.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-002",
+          "category": "Dining Trends & Cuisine Preferences",
+          "title": "Dining Trends & Cuisine Preferences — Bella Italia Trattoria",
+          "claim": "Consumer dining preferences in Banani, Gulshan & Baridhara, Dhaka, Bangladesh reflect high responsiveness to authentic preparation, quality ingredients, and memorable guest ambiance for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu.",
+          "explanation": "Local dining demand is shaped by word-of-mouth reputation and visual discovery across social dining communities.",
+          "evidence_excerpt": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-003",
+          "category": "Local Competing Venues & Differentiation",
+          "title": "Local Competing Venues & Differentiation — Bella Italia Trattoria",
+          "claim": "Commercial alternatives in Banani, Gulshan & Baridhara, Dhaka, Bangladesh compete actively through catalog differentiation, service quality, and introductory promotional incentives.",
+          "explanation": "Market participants vie for category share by addressing service friction points and highlighting unique value propositions.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-004",
+          "category": "Menu Pricing & Promotional Offers",
+          "title": "Menu Pricing & Promotional Offers — Bella Italia Trattoria",
+          "claim": "Consumer dining preferences in Banani, Gulshan & Baridhara, Dhaka, Bangladesh reflect high responsiveness to authentic preparation, quality ingredients, and memorable guest ambiance for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu.",
+          "explanation": "Local dining demand is shaped by word-of-mouth reputation and visual discovery across social dining communities.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-005",
+          "category": "Local Footfall, Booking & Discovery Channels",
+          "title": "Local Footfall, Booking & Discovery Channels — Bella Italia Trattoria",
+          "claim": "Target audience discovery for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu in Banani, Gulshan & Baridhara, Dhaka, Bangladesh centers on digital platforms and direct engagement channels aligned with Commercial Growth.",
+          "explanation": "Effective marketing deploys audience-specific creatives and clear calls-to-action tailored to the primary discovery medium.",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Prego at Westin",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Food & Beverage / Restaurant & Hospitality.",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "Spaghetti Jazz",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Food & Beverage / Restaurant & Hospitality.",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "Pizza Guy",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in Food & Beverage / Restaurant & Hospitality.",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-001",
+          "title": "Page Not Found",
+          "publisher": "en.wikipedia.org",
+          "domain": "en.wikipedia.org",
+          "original_url": "https://en.wikipedia.org/wiki/Food_Beverage_Restaurant_Hospitality",
+          "final_url": "https://en.wikipedia.org/wiki/Food_Beverage_Restaurant_Hospitality",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 404,
+          "validation_status": "BROKEN",
+          "source_type": "Tertiary Reference (Wikipedia)",
+          "source_tier": "TERTIARY",
+          "evidence_excerpt": "The requested page returned HTTP 404.",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://en.wikipedia.org/wiki/Food_Beverage_Restaurant_Hospitality"
+          ],
+          "content_snippet": "The requested page returned HTTP 404."
+        },
+        {
+          "source_id": "SRC-002",
+          "title": "Business",
+          "publisher": "The Daily Star",
+          "domain": "thedailystar.net",
+          "original_url": "https://www.thedailystar.net/business",
+          "final_url": "https://www.thedailystar.net/business",
+          "published_date": "2026-11-14",
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "Reputable News Media",
+          "source_tier": "SECONDARY",
+          "evidence_excerpt": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://www.thedailystar.net/business"
+          ],
+          "content_snippet": "Business | The Daily Star Skip to main content বাংলা E-paper Today’s News Sunday, November 15, 2026 E-paper Today’s News News Politics Governance Crime and Justice Accidents and Fires Technology Education Environment Healthcare World Opinion Editorial Views Interviews Business Economy Agriculture In"
+        },
+        {
+          "source_id": "SRC-003",
+          "title": "Business - Dhaka Tribune",
+          "publisher": "Dhaka Tribune",
+          "domain": "dhakatribune.com",
+          "original_url": "https://www.dhakatribune.com/business",
+          "final_url": "https://www.dhakatribune.com/business",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "Reputable News Media",
+          "source_tier": "SECONDARY",
+          "evidence_excerpt": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://www.dhakatribune.com/business"
+          ],
+          "content_snippet": "--> Business - Dhaka Tribune --> Sunday, November 15, 2026 Section E-paper Home Bangladesh Crime Laws & Rights Education Dhaka Politics Weather Campus Accidents Business Economy Banks Commerce Stock Market Real Estate World Asia South Asia Africa Middle East Europe North America Sport Cricket Footba"
+        }
+      ],
+      "stats": {
+        "total_sources": 3,
+        "verified_sources": 2,
+        "unverified_sources": 1,
+        "primary_sources": 0,
+        "secondary_sources": 2,
+        "tertiary_sources": 0,
+        "total_findings": 5,
+        "verified_findings": 0,
+        "partially_verified_findings": 0,
+        "unverified_findings": 5,
+        "contradicted_findings": 0,
+        "completion_rate_percent": 67
+      },
+      "search_provider_status": {
+        "active_provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "is_live_search_available": false,
+        "missing_credentials": [
+          "TAVILY_API_KEY",
+          "SERPAPI_API_KEY",
+          "BRAVE_API_KEY"
+        ],
+        "provider_notes": "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Using validated institutional references and public knowledge endpoints. Commercial statistics must be verified with primary trade sources."
+      },
+      "limitations": [
+        "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Research was conducted using reference knowledge bases and public news indices. Findings are directional."
+      ],
+      "provider_metadata": {
+        "provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "queries_executed": [
+          "Food  Beverage  Restaurant  Hospitality market dynamics Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Woodfired Neapolitan Pizza Handmade Tagliatelle  Tiramisu customer demand Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality Woodfired Neapolitan Pizza Handmade Tagliatelle  Tiramisu competitors Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality pricing and business offers Banani Gulshan  Baridhara Dhaka Bangladesh",
+          "Food  Beverage  Restaurant  Hospitality digital acquisition channels Banani Gulshan  Baridhara Dhaka Bangladesh"
+        ],
+        "generated_at": "2026-11-14T18:57:44.761Z",
+        "version": "1.0"
+      },
+      "market_research": {
+        "overview": "Documented regional trade references confirm existing commercial activity and distribution channels for Bella Italia Trattoria.",
+        "market_size": "Commercial category in Banani, Gulshan & Baridhara, Dhaka, Bangladesh with active demand",
+        "growth": "Ongoing sector development reported in regional business media",
+        "trends": [],
+        "opportunities": [
+          "Target audience discovery for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu in Banani, Gulshan & Baridhara, Dhaka, Bangladesh centers on digital platforms and direct engagement channels aligned with Commercial Growth."
+        ],
+        "risks": []
+      },
+      "competitor_research": [
+        {
+          "name": "Prego at Westin",
+          "website": "",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "Spaghetti Jazz",
+          "website": "",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "Pizza Guy",
+          "website": "",
+          "products": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in Food & Beverage / Restaurant & Hospitality",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        }
+      ],
+      "audience_research": {
+        "demographics": [
+          "Affluent food enthusiasts, families, and young professionals looking for authentic Italian dining"
+        ],
+        "interests": [
+          "Food & Beverage / Restaurant & Hospitality solutions",
+          "Quality service"
+        ],
+        "behaviors": [
+          "Digital discovery",
+          "Evaluation of alternatives"
+        ],
+        "pain_points": [
+          "Value uncertainty",
+          "Onboarding friction"
+        ],
+        "motivations": [
+          "Demonstrated utility",
+          "Reliable support"
+        ],
+        "buying_patterns": [
+          "Active evaluation period"
+        ],
+        "platform_usage": [
+          "Digital discovery channels",
+          "Direct consultation"
+        ]
+      },
+      "platform_research": [
+        {
+          "platform": "Primary Digital Channels",
+          "suitability_score": "9.0 / 10",
+          "recommended_content": "Targeted messaging highlighting Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu value proposition",
+          "formats": [
+            "Search & Discovery Ads",
+            "Direct Response Ads"
+          ],
+          "best_practices": [
+            "Clear value proposition",
+            "Direct call-to-action"
+          ]
+        }
+      ],
+      "pricing_research": {
+        "market_price_range": "1200",
+        "competitor_prices": [
+          {
+            "item": "Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu",
+            "price": "Public catalog pricing"
+          }
+        ],
+        "common_offers": [
+          "Grand Opening Week: 15% discount on advance table reservations"
+        ],
+        "discount_patterns": [
+          "Promotional incentives",
+          "Value bundles"
+        ]
+      },
+      "trends_and_opportunities": {
+        "content_trends": [
+          "Direct problem-solution messaging",
+          "Verified customer outcomes"
+        ],
+        "consumer_trends": [
+          "Demand for transparent pricing and reliability"
+        ],
+        "seasonal_trends": [
+          "Periodic campaign peaks"
+        ],
+        "opportunities": [
+          "Establish market leadership in Banani, Gulshan & Baridhara, Dhaka, Bangladesh for Wood-fired Neapolitan Pizza, Handmade Tagliatelle, & Tiramisu"
+        ]
+      }
+    }
+  },
+  {
+    "campaignIndex": 3,
+    "name": "CloudPulse AI Kubernetes Observability Launch",
+    "clientId": "6af8af2836ccf4e8218b345e",
+    "campaignId": "6af8af2836ccf4e8218b345f",
+    "company": "CloudPulse AI",
+    "industry": "B2B SaaS / DevOps & Cloud Infrastructure Observability",
+    "location": "North America, Western Europe, and Global Tech Hubs",
+    "durationMs": 1621,
+    "dossier": {
+      "artifact_id": "artifact_2",
+      "type": "research_enrichment",
+      "campaign_id": "",
+      "version": "1.0",
+      "business_name": "CloudPulse AI",
+      "industry": "B2B SaaS / DevOps & Cloud Infrastructure Observability",
+      "campaign_profile": {
+        "business_name": "CloudPulse AI",
+        "industry": "B2B SaaS / DevOps & Cloud Infrastructure Observability",
+        "business_model_hint": "B2B_SAAS_TECH",
+        "campaign_objective": "Commercial Growth",
+        "campaign_type": "General Campaign",
+        "geography": "North America, Western Europe, and Global Tech Hubs",
+        "target_audience": "DevOps Engineers, Site Reliability Engineers (SREs), and Engineering Directors managing Kubernetes clusters",
+        "budget_level": "Unspecified",
+        "duration": "Standard",
+        "research_depth": "COMPREHENSIVE",
+        "selected_categories": [
+          "Industry Landscape & Market Dynamics",
+          "Customer Acquisition & Trial Conversion",
+          "Competitive Landscape & Alternatives",
+          "Subscription Pricing & Packaging Models",
+          "Security, Integration & Technical Decision Factors"
+        ],
+        "generated_queries": [
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability market dynamics North America Western Europe and Global Tech Hubs",
+          "Autonomous Kubernetes Incident Detection  RootCause Analysis Platform customer demand North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability Autonomous Kubernetes Incident Detection  RootCause Analysis Platform competitors North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability pricing and business offers North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability digital acquisition channels North America Western Europe and Global Tech Hubs"
+        ]
+      },
+      "research_status": "PARTIALLY_COMPLETED",
+      "completion_date": "2026-11-14",
+      "categories_completed": [
+        "Industry Landscape & Market Dynamics",
+        "Customer Acquisition & Trial Conversion",
+        "Competitive Landscape & Alternatives",
+        "Subscription Pricing & Packaging Models",
+        "Security, Integration & Technical Decision Factors"
+      ],
+      "findings": [
+        {
+          "finding_id": "FND-001",
+          "category": "Industry Landscape & Market Dynamics",
+          "title": "Industry Landscape & Market Dynamics — CloudPulse AI",
+          "claim": "The B2B SaaS / DevOps & Cloud Infrastructure Observability sector represents an established commercial category in North America, Western Europe, and Global Tech Hubs, characterized by active market demand for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform.",
+          "explanation": "Documented regional trade references confirm existing commercial activity and distribution channels for CloudPulse AI.",
+          "evidence_excerpt": "ITA strengthens the competitiveness of U.S. industry, promotes trade and investment, and ensures fair trade through our trade laws and agreements.",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-002",
+          "category": "Customer Acquisition & Trial Conversion",
+          "title": "Customer Acquisition & Trial Conversion — CloudPulse AI",
+          "claim": "Customer acquisition for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform in North America, Western Europe, and Global Tech Hubs relies on low-friction product onboarding, transparent feature utility, and self-serve trial conversion.",
+          "explanation": "Technical buyers prioritize verifiable feature utility and rapid time-to-value before committing organizational resources.",
+          "evidence_excerpt": "World Bank Open Data from The World Bank: Data",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-003",
+          "category": "Competitive Landscape & Alternatives",
+          "title": "Competitive Landscape & Alternatives — CloudPulse AI",
+          "claim": "The B2B SaaS / DevOps & Cloud Infrastructure Observability sector represents an established commercial category in North America, Western Europe, and Global Tech Hubs, characterized by active market demand for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform.",
+          "explanation": "Documented regional trade references confirm existing commercial activity and distribution channels for CloudPulse AI.",
+          "evidence_excerpt": "ITA strengthens the competitiveness of U.S. industry, promotes trade and investment, and ensures fair trade through our trade laws and agreements.",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "HYPOTHESIS",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-004",
+          "category": "Subscription Pricing & Packaging Models",
+          "title": "Subscription Pricing & Packaging Models — CloudPulse AI",
+          "claim": "Commercial pricing and offer adoption for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform in North America, Western Europe, and Global Tech Hubs is optimized when value metrics are transparent and aligned with customer budgets.",
+          "explanation": "Value-based pricing structures combined with risk-reducing guarantees or introductory incentives accelerate customer sign-up.",
+          "evidence_excerpt": "World Bank Open Data from The World Bank: Data",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        },
+        {
+          "finding_id": "FND-005",
+          "category": "Security, Integration & Technical Decision Factors",
+          "title": "Security, Integration & Technical Decision Factors — CloudPulse AI",
+          "claim": "Operational delivery for CloudPulse AI in North America, Western Europe, and Global Tech Hubs requires proactive risk mitigation regarding customer commitment, service delivery, and market volatility.",
+          "explanation": "Establishing clear communication, transparent customer expectations, and standard service protocols mitigates typical operational risks.",
+          "evidence_excerpt": "World Bank Open Data from The World Bank: Data",
+          "supporting_source_ids": [],
+          "confidence": "Low",
+          "evidence_status": "UNVERIFIED",
+          "finding_nature": "RECOMMENDATION",
+          "evidence_evaluation": "Source does not contain sufficient textual evidence to validate this specific claim.",
+          "limitations": "Empirical third-party data unavailable in live sources; strategic hypothesis requires live campaign testing.",
+          "retrieved_date": "2026-11-14"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Datadog",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in B2B SaaS / DevOps & Cloud Infrastructure Observability.",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "Dynatrace",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in B2B SaaS / DevOps & Cloud Infrastructure Observability.",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        },
+        {
+          "name": "New Relic",
+          "website": "",
+          "is_official_domain": false,
+          "business_description": "Market competitor identified in B2B SaaS / DevOps & Cloud Infrastructure Observability.",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "pricing": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "strengths": [
+            "Brand recognized in discovery"
+          ],
+          "weaknesses": [
+            "Official website domain unverified"
+          ],
+          "source_ids": [
+            "SRC-002"
+          ],
+          "last_verified_date": "2026-11-14",
+          "validation_status": "BROKEN",
+          "notes": "Official website not provided by client or verified via search."
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-001",
+          "title": "Page Not Found",
+          "publisher": "en.wikipedia.org",
+          "domain": "en.wikipedia.org",
+          "original_url": "https://en.wikipedia.org/wiki/B2B_SaaS_DevOps_Cloud_Infrastructure_Observability",
+          "final_url": "https://en.wikipedia.org/wiki/B2B_SaaS_DevOps_Cloud_Infrastructure_Observability",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 404,
+          "validation_status": "BROKEN",
+          "source_type": "Tertiary Reference (Wikipedia)",
+          "source_tier": "TERTIARY",
+          "evidence_excerpt": "The requested page returned HTTP 404.",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://en.wikipedia.org/wiki/B2B_SaaS_DevOps_Cloud_Infrastructure_Observability"
+          ],
+          "content_snippet": "The requested page returned HTTP 404."
+        },
+        {
+          "source_id": "SRC-002",
+          "title": "World Bank Open Data",
+          "publisher": "World Bank Open Data",
+          "domain": "data.worldbank.org",
+          "original_url": "https://data.worldbank.org",
+          "final_url": "https://data.worldbank.org/",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "International Statistical Database",
+          "source_tier": "PRIMARY",
+          "evidence_excerpt": "World Bank Open Data from The World Bank: Data",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://data.worldbank.org/"
+          ],
+          "content_snippet": "World Bank Open Data from The World Bank: Data"
+        },
+        {
+          "source_id": "SRC-003",
+          "title": "International Trade Administration",
+          "publisher": "International Trade Administration | Trade.gov",
+          "domain": "trade.gov",
+          "original_url": "https://www.trade.gov",
+          "final_url": "https://www.trade.gov/",
+          "published_date": null,
+          "accessed_date": "2026-11-14",
+          "http_status": 200,
+          "validation_status": "VERIFIED",
+          "source_type": "Government Trade Authority",
+          "source_tier": "PRIMARY",
+          "evidence_excerpt": "ITA strengthens the competitiveness of U.S. industry, promotes trade and investment, and ensures fair trade through our trade laws and agreements.",
+          "supported_finding_ids": [],
+          "redirect_chain": [
+            "https://www.trade.gov/"
+          ],
+          "content_snippet": "ITA strengthens the competitiveness of U.S. industry, promotes trade and investment, and ensures fair trade through our trade laws and agreements."
+        }
+      ],
+      "stats": {
+        "total_sources": 3,
+        "verified_sources": 2,
+        "unverified_sources": 1,
+        "primary_sources": 2,
+        "secondary_sources": 0,
+        "tertiary_sources": 0,
+        "total_findings": 5,
+        "verified_findings": 0,
+        "partially_verified_findings": 0,
+        "unverified_findings": 5,
+        "contradicted_findings": 0,
+        "completion_rate_percent": 67
+      },
+      "search_provider_status": {
+        "active_provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "is_live_search_available": false,
+        "missing_credentials": [
+          "TAVILY_API_KEY",
+          "SERPAPI_API_KEY",
+          "BRAVE_API_KEY"
+        ],
+        "provider_notes": "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Using validated institutional references and public knowledge endpoints. Commercial statistics must be verified with primary trade sources."
+      },
+      "limitations": [
+        "Live external search APIs (Tavily/SerpApi/Brave) are not configured. Research was conducted using reference knowledge bases and public news indices. Findings are directional."
+      ],
+      "provider_metadata": {
+        "provider": "Curated Knowledge & Encyclopedia Index (Fallback Mode)",
+        "queries_executed": [
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability market dynamics North America Western Europe and Global Tech Hubs",
+          "Autonomous Kubernetes Incident Detection  RootCause Analysis Platform customer demand North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability Autonomous Kubernetes Incident Detection  RootCause Analysis Platform competitors North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability pricing and business offers North America Western Europe and Global Tech Hubs",
+          "B2B SaaS  DevOps  Cloud Infrastructure Observability digital acquisition channels North America Western Europe and Global Tech Hubs"
+        ],
+        "generated_at": "2026-11-14T18:57:46.860Z",
+        "version": "1.0"
+      },
+      "market_research": {
+        "overview": "Documented regional trade references confirm existing commercial activity and distribution channels for CloudPulse AI.",
+        "market_size": "Commercial category in North America, Western Europe, and Global Tech Hubs with active demand",
+        "growth": "Ongoing sector development reported in regional business media",
+        "trends": [],
+        "opportunities": [
+          "Commercial pricing and offer adoption for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform in North America, Western Europe, and Global Tech Hubs is optimized when value metrics are transparent and aligned with customer budgets.",
+          "Operational delivery for CloudPulse AI in North America, Western Europe, and Global Tech Hubs requires proactive risk mitigation regarding customer commitment, service delivery, and market volatility."
+        ],
+        "risks": []
+      },
+      "competitor_research": [
+        {
+          "name": "Datadog",
+          "website": "",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "Dynatrace",
+          "website": "",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        },
+        {
+          "name": "New Relic",
+          "website": "",
+          "products": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+          "price_range": "Public catalog pricing",
+          "positioning": "Competitor in B2B SaaS / DevOps & Cloud Infrastructure Observability",
+          "offers": "Standard commercial promotions",
+          "social_presence": "Active market storefront",
+          "content_strategy": "Commercial customer engagement"
+        }
+      ],
+      "audience_research": {
+        "demographics": [
+          "DevOps Engineers, Site Reliability Engineers (SREs), and Engineering Directors managing Kubernetes clusters"
+        ],
+        "interests": [
+          "B2B SaaS / DevOps & Cloud Infrastructure Observability solutions",
+          "Quality service"
+        ],
+        "behaviors": [
+          "Digital discovery",
+          "Evaluation of alternatives"
+        ],
+        "pain_points": [
+          "Value uncertainty",
+          "Onboarding friction"
+        ],
+        "motivations": [
+          "Demonstrated utility",
+          "Reliable support"
+        ],
+        "buying_patterns": [
+          "Active evaluation period"
+        ],
+        "platform_usage": [
+          "Digital discovery channels",
+          "Direct consultation"
+        ]
+      },
+      "platform_research": [
+        {
+          "platform": "Primary Digital Channels",
+          "suitability_score": "9.0 / 10",
+          "recommended_content": "Targeted messaging highlighting Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform value proposition",
+          "formats": [
+            "Search & Discovery Ads",
+            "Direct Response Ads"
+          ],
+          "best_practices": [
+            "Clear value proposition",
+            "Direct call-to-action"
+          ]
+        }
+      ],
+      "pricing_research": {
+        "market_price_range": "299",
+        "competitor_prices": [
+          {
+            "item": "Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform",
+            "price": "Public catalog pricing"
+          }
+        ],
+        "common_offers": [
+          "14-Day Full-Access Enterprise Free Trial + Guided Kubernetes Cluster Audit"
+        ],
+        "discount_patterns": [
+          "Promotional incentives",
+          "Value bundles"
+        ]
+      },
+      "trends_and_opportunities": {
+        "content_trends": [
+          "Direct problem-solution messaging",
+          "Verified customer outcomes"
+        ],
+        "consumer_trends": [
+          "Demand for transparent pricing and reliability"
+        ],
+        "seasonal_trends": [
+          "Periodic campaign peaks"
+        ],
+        "opportunities": [
+          "Establish market leadership in North America, Western Europe, and Global Tech Hubs for Autonomous Kubernetes Incident Detection & Root-Cause Analysis Platform"
+        ]
+      }
+    }
+  }
+]
