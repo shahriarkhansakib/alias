@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_ENV: test
+  API_PORT: 4000
+  API_HOST: 127.0.0.1
+  WEB_PORT: 3000
+  API_INTERNAL_URL: http://127.0.0.1:4000
+  DATABASE_URL: postgresql://alias:alias@localhost:5432/alias
+  BETTER_AUTH_SECRET: alias-ci-test-secret-change-me-at-least-32-chars
+  BETTER_AUTH_URL: http://localhost:3000
+  WEB_ORIGIN: http://localhost:3000
+  TRUSTED_ORIGINS: http://localhost:3000
+  SMTP_HOST: 127.0.0.1
+  SMTP_PORT: 1025
+  SMTP_SECURE: "false"
+  EMAIL_FROM: Alias <no-reply@alias.local>
+  MAILPIT_API_URL: http://127.0.0.1:8025
+  AUTH_RATE_LIMIT_ENABLED: "false"
+  LOG_LEVEL: warn
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: alias
+          POSTGRES_PASSWORD: alias
+          POSTGRES_DB: alias
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U alias -d alias"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      mailpit:
+        image: axllent/mailpit:latest
+        ports:
+          - 1025:1025
+          - 8025:8025
+        options: >-
+          --health-cmd "/mailpit readyz"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.14.0"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check formatting
+        run: pnpm format:check
+
+      - name: Lint with Biome
+        run: pnpm lint:biome
+
+      - name: Lint architectural boundaries
+        run: pnpm lint:arch
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Run unit tests
+        run: pnpm test:unit
+
+      - name: Run database migrations
+        run: pnpm db:migrate
+
+      - name: Run PostgreSQL integration tests
+        run: pnpm test:integration
+
+      - name: Build packages and apps
+        run: pnpm build
+
+      - name: Install Playwright Chromium
+        run: pnpm --filter @alias/web exec playwright install chromium --with-deps
+
+      - name: Run Playwright E2E tests
+        run: pnpm test:e2e
