@@ -47,10 +47,10 @@ pnpm db:migrate
 pnpm seed:demo
 ```
 
-| Role | Email | Password | Lands on |
-| --- | --- | --- | --- |
-| Client | `demo@alias.local` | `AliasDemo#2026!` | `/dashboard` (links to Systems 1–3) |
-| Platform super admin | `admin@alias.local` | `AliasAdmin#2026!` | `/admin` |
+| Role                 | Email               | Password           | Lands on                            |
+| -------------------- | ------------------- | ------------------ | ----------------------------------- |
+| Client               | `demo@alias.local`  | `AliasDemo#2026!`  | `/dashboard` (links to Systems 1–3) |
+| Platform super admin | `admin@alias.local` | `AliasAdmin#2026!` | `/admin`                            |
 
 The command is idempotent and refuses to run when `NODE_ENV=production`. These are local test
 credentials only. The three systems themselves run as separate apps; see `systems/README.md`.
