@@ -57,7 +57,7 @@ and report the results honestly — including failures.
    change, approach, tests), and get it approved before editing.
 2. **Read the nearest `AGENTS.md`.** Before editing files in a folder, read the `AGENTS.md` closest
    to that folder (e.g. `apps/api/AGENTS.md`). It overrides this file for that area.
-3. **Small, reviewable changes.** One concern per branch and pull request.
+3. **Small, reviewable changes.** One concern per commit (see Git).
 4. **Keep docs true.** If your change alters what a module does or how, update that module's
    `AGENTS.md` in the same pull request. Record significant decisions as an ADR (`write-adr` skill).
 5. **Never invent.** Do not invent APIs, env vars, table names or library features. Check the code
@@ -108,15 +108,21 @@ are next changed. API unit tests (`*.unit.test.ts`) sit next to the code; API in
 
 ## Git
 
-- Never commit to or push `main` directly. Branch as `feat/…`, `fix/…`, `chore/…`, `docs/…`.
+- All Phase 0 work is committed on the long-lived branch `phase-zero`, in small commits. Each
+  commit passes `pnpm format:check`, `pnpm lint`, `pnpm typecheck` and the tests relevant to it.
 - Conventional commit messages: `feat(intake): add message history endpoint`.
-- Open a pull request; CI must be green before merge.
+- There is one draft pull request from `phase-zero` into `main`. Every pushed commit is reviewed.
+- Agents may push to `phase-zero` only after the checks pass and after confirming the diff contains
+  no secrets and no `.env` content (`pre-pr-check` skill).
+- Agents never push to `main`, never force-push, never rewrite pushed history, and never merge
+  pull requests. Only the owner merges.
 
 ## Security
 
 - **Never read, print or commit `.env`, `.env.local` or any secret.** Use `.env.example` to learn
   which variables exist. Never paste real keys into code, tests, logs or chat.
-- Never run destructive commands (`db:reset`, `rm -rf`, force-push) without explicit approval.
+- Never run destructive commands (`db:reset`, `rm -rf`, dropping tables) without explicit
+  approval. Force-pushing is never allowed (see Git).
 - `db:reset` is for localhost only.
 
 ## Skills available (in `.agents/skills/`)
@@ -127,4 +133,4 @@ are next changed. API unit tests (`*.unit.test.ts`) sit next to the code; API in
 | `api-test-suite` | Write or extend tests in happy / edge / error sections |
 | `db-migration` | Change the database schema safely with Drizzle |
 | `write-adr` | Record an architecture decision |
-| `pre-pr-check` | Run every check and prepare a pull request description |
+| `pre-pr-check` | Run the CI steps in order and confirm a commit is safe to push to `phase-zero` |
