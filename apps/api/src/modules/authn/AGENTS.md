@@ -43,8 +43,16 @@ response. All other auth flows are Better Auth's own.
 valid session and sets `c.get('auth')`. The header `x-alias-disable-refresh: true` reads the
 session without refreshing it.
 
-**Configuration** (from `shared/env.ts`): email verification is required to sign in; reset emails
-and verification emails go through `MailerPort`; Google sign-in is on only when both Google client
+**Emails.** Verification and password-reset emails go through `MailerPort` via `deliver()` in
+`better-auth.ts`. Better Auth runs them as background tasks (`advanced.backgroundTasks`), so
+sign-up returns without waiting for SMTP. On failure `deliver()` logs one line (user id, error
+code, message; no stack, no address) and does not rethrow. The register page therefore always
+shows "Check your email" and offers "Send again" (30 s cooldown) through Better Auth's existing
+`/api/auth/send-verification-email` endpoint; it never reveals whether delivery worked.
+In development Nodemailer uses short timeouts (`DEVELOPMENT_SMTP_TIMEOUTS`: 5 s connect, 5 s
+greeting, 10 s socket).
+
+**Configuration** (from `shared/env.ts`): email verification is required to sign in; Google sign-in is on only when both Google client
 variables are set; rate limiting (100 requests per 60 s, stored in `rate_limit`) is on when
 `AUTH_RATE_LIMIT_ENABLED` is true; cookies are `httpOnly`, `sameSite=lax`, and `secure` in
 production.
