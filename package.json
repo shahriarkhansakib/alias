@@ -25,6 +25,7 @@
     "db:migrate": "pnpm --filter @alias/api db:migrate",
     "db:reset": "pnpm --filter @alias/api db:reset",
     "bootstrap:admin": "pnpm --filter @alias/api bootstrap:admin",
+    "seed:demo": "pnpm --filter @alias/api seed:demo",
     "prepare": "husky"
   },
   "lint-staged": {

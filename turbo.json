@@ -20,7 +20,10 @@
     "GOOGLE_CLIENT_SECRET",
     "AUTH_RATE_LIMIT_ENABLED",
     "LOG_LEVEL",
-    "CI"
+    "CI",
+    "ALIAS_S1_URL",
+    "ALIAS_S2_URL",
+    "ALIAS_S3_URL"
   ],
   "tasks": {
     "build": {
