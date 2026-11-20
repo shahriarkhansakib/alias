@@ -47,8 +47,12 @@ const EnvSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   API_PORT: z.coerce.number().int().min(1).max(65535).default(4000),
   API_HOST: z.string().min(1).default('0.0.0.0'),
-  DATABASE_URL: z.string().min(1),
-  BETTER_AUTH_SECRET: z.string().min(32),
+  DATABASE_URL: z
+    .string('Missing: set it to your Postgres connection URL')
+    .min(1, 'Missing: set it to your Postgres connection URL'),
+  BETTER_AUTH_SECRET: z
+    .string('Missing: set it to a random string of at least 32 characters')
+    .min(32, 'Too short: use a random string of at least 32 characters'),
   BETTER_AUTH_URL: z.url().default('http://localhost:3000'),
   WEB_ORIGIN: z.url().default('http://localhost:3000'),
   TRUSTED_ORIGINS: z.string().default('http://localhost:3000'),
@@ -85,17 +89,58 @@ export interface AppEnvConfig {
   logLevel: 'fatal' | 'error' | 'warn' | 'info' | 'debug' | 'trace' | 'silent';
 }
 
+export const ENV_HINT =
+  'Copy .env.example to .env in the repository root and fill in the values, or set the variables in your shell.';
+
+/**
+ * Turns a failed env validation into a short, readable report: one line per missing or invalid
+ * variable (Zod's `prettifyError`), followed by a hint. No stack trace.
+ */
+export function formatEnvError(error: z.ZodError): string {
+  const count = error.issues.length;
+  return [
+    `Invalid environment configuration (${count} ${count === 1 ? 'problem' : 'problems'}):`,
+    '',
+    z.prettifyError(error),
+    '',
+    ENV_HINT,
+  ].join('\n');
+}
+
+export type ParseEnvResult = { ok: true; config: AppEnvConfig } | { ok: false; message: string };
+
+/** Validates a set of environment variables without reading files or exiting. */
+export function parseEnv(source: Record<string, string | undefined>): ParseEnvResult {
+  const result = EnvSchema.safeParse(source);
+  if (!result.success) {
+    return { ok: false, message: formatEnvError(result.error) };
+  }
+  return { ok: true, config: toAppEnvConfig(result.data) };
+}
+
+/**
+ * Loads the root `.env` (without overriding variables already set), validates the environment
+ * and returns the config. On invalid configuration it prints the report to stderr and exits
+ * with code 1.
+ */
 export function loadEnv(overrides?: Partial<NodeJS.ProcessEnv>): AppEnvConfig {
   const rootEnvPath = findRootEnvPath(import.meta.dirname);
   if (rootEnvPath) {
-    dotenv.config({ path: rootEnvPath, override: false });
+    dotenv.config({ path: rootEnvPath, override: false, quiet: true });
   }
 
-  const parsed = EnvSchema.parse({
+  const result = parseEnv({
     ...process.env,
     ...overrides,
   });
+  if (!result.ok) {
+    process.stderr.write(`${result.message}\n`);
+    process.exit(1);
+  }
+  return result.config;
+}
 
+function toAppEnvConfig(parsed: z.output<typeof EnvSchema>): AppEnvConfig {
   const trustedOrigins = Array.from(
     new Set(
       parsed.TRUSTED_ORIGINS.split(',')
