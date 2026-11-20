@@ -48,13 +48,14 @@ Requires Node.js >= 22.14, pnpm (the version in `package.json` `packageManager`)
 
    Copy .env.example to .env in the repository root and fill in the values, or set the variables in your shell.
    ```
-4. Apply reviewed forward-only SQL migrations and seed system roles:
+4. Apply reviewed forward-only SQL migrations and the mandatory seed data (system roles and
+   permissions):
 
    ```sh
    pnpm db:migrate
    ```
 
-   (Or run `pnpm db:reset` on localhost to drop/recreate schemas, apply all migrations, and seed system roles.)
+   To start over from an empty database, see [Starting over](#starting-over-pnpm-dbreset).
 5. Start development servers (web on http://localhost:3000, API on http://localhost:4000).
    There are two output modes; both skip replaying cached build logs (`--output-logs=new-only`):
 
@@ -94,6 +95,47 @@ SMTP server greets (`SMTP_HOST`/`SMTP_PORT`), that the Mailpit web UI is ready
 
 It is `dev:doctor` and not `doctor` because `pnpm doctor` is a built-in pnpm command (it checks
 pnpm's own installation) and runs instead of a script with that name.
+
+### Starting over: `pnpm db:reset`
+
+`pnpm db:reset` rebuilds your local database from scratch. It deletes this project's Docker
+containers and volume (all local database data), starts fresh ones, applies the migrations and
+seeds the mandatory data (system roles and permissions, never demo data):
+
+```text
+✓ Target is a local database (localhost:5432)
+✓ Docker is running (server 29.0.1)
+This deletes everything in the Docker Compose project "alias":
+  containers: alias-postgres-1, alias-mailpit-1
+  volumes:    alias_postgres_data (all local database data)
+Type yes to continue: yes
+✓ Confirmed
+✓ Removed containers and volumes
+✓ Started Postgres and Mailpit
+✓ Postgres accepts connections
+✓ Applied migrations
+✓ Seeded system roles and permissions
+
+✓ Done. Local database rebuilt.
+  Postgres      localhost:5432
+  Mailpit SMTP  localhost:1025
+  Mailpit web   http://localhost:8025
+  Seeded        mandatory data only (system roles and permissions)
+```
+
+- It refuses when `NODE_ENV=production` or when `DATABASE_URL` does not point at `localhost`,
+  `127.0.0.1` or `::1`, and stops with a clear message if Docker is not running.
+- Only the Compose project `alias` (pinned with `name:` in `docker-compose.yml`) is affected,
+  whatever the folder is called.
+- `pnpm db:reset --yes` skips the question. Without a terminal it refuses unless `--yes` is given.
+- The summary shows the ports Docker really uses and warns if `DATABASE_URL`, `SMTP_PORT` or
+  `MAILPIT_API_URL` point elsewhere.
+
+`pnpm db:reset:schema` is the lighter version: it keeps the containers, drops and recreates the
+schemas in the running Postgres, then migrates and seeds. The E2E tests use it.
+
+After a reset there are no users. Register again, or create the first super admin as described in
+[Initial Super Admin Bootstrap](#initial-super-admin-bootstrap).
 
 ### Logging
 

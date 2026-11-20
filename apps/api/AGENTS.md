@@ -23,9 +23,15 @@ src/
   db/
     client.ts            pg pool, Drizzle instance and the UnitOfWork implementation
     schema.ts            aggregator: re-exports every module's tables (drizzle-kit reads this)
-    migrate.ts           pnpm db:migrate: apply migrations, then seed roles
-    seed-roles.ts        system roles and their permissions
-    reset.ts             pnpm db:reset: local databases only
+    migrate.ts           pnpm db:migrate: applyMigrations(), then the mandatory seeds
+    mandatory-seeds.ts   MANDATORY_SEEDS: data the app cannot run without (idempotent;
+                         never demo data). Add new mandatory seeds here
+    seed-roles.ts        system roles and their permissions (a mandatory seed)
+    reset-schema.ts      pnpm db:reset:schema: drop/recreate schemas, migrate, seed (local only;
+                         used by E2E); assertSafeLocalReset()
+    rebuild.ts           pnpm db:reset: docker compose down -v / up, migrate, seed (local only,
+                         asks "Type yes", --yes skips)
+    connection-error.ts  describeDatabaseError(): one readable line for connection failures
   modules/<module>/
     index.ts             the ONLY public entry point of the module
     domain/              pure business rules; no framework, ORM or I/O imports

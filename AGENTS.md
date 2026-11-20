@@ -35,18 +35,32 @@ The full plan lives in the "Alias — Product & Engineering Master Plan" doc.
 Use **pnpm** only (never npm or yarn). Node >= 22.14.
 
 ```sh
-docker compose up -d --wait   # Postgres 18 + Mailpit
+docker compose up -d --wait   # Postgres 18 + Mailpit (compose project "alias")
 pnpm install
-pnpm db:migrate               # apply migrations and seed roles
-pnpm dev                      # web + api
+pnpm db:migrate               # apply migrations and the mandatory seed data
+pnpm dev                      # web + api, Turborepo terminal UI
+pnpm dev:stream               # web + api, plain copyable output
+pnpm dev:doctor               # check .env, Postgres, Mailpit and free ports
 pnpm lint                     # Biome + architecture boundaries
 pnpm typecheck
 pnpm test                     # unit + integration
 pnpm test:e2e                 # Playwright
-pnpm test:scripts             # tests for scripts/ (agent config sync)
+pnpm test:scripts             # tests for scripts/ (agent config sync, doctor)
 pnpm format                   # Biome format
 pnpm agents:sync              # regenerate tool-specific agent files after editing .agents/
 ```
+
+Destructive, local only, ask the user first (see Security):
+
+```sh
+pnpm db:reset                 # delete this project's containers and volumes, start fresh,
+                              # migrate, mandatory seed; asks "Type yes" (--yes skips)
+pnpm db:reset:schema          # drop and recreate the schemas in the running Postgres, migrate,
+                              # mandatory seed; used by the E2E tests
+```
+
+Mandatory seed data (system roles and permissions) is listed in
+`apps/api/src/db/mandatory-seeds.ts`. Demo data never goes there.
 
 Before saying a task is done, run `pnpm lint`, `pnpm typecheck` and the tests for what you changed,
 and report the results honestly — including failures.
@@ -123,9 +137,11 @@ are next changed. API unit tests (`*.unit.test.ts`) sit next to the code; API in
   `.env.example` to learn which variables exist. Never paste real keys into code, tests, logs or
   chat. Claude Code also denies these reads in `.claude/settings.json`; see
   `docs/agents/README.md` for what that does and does not block.
-- Never run destructive commands (`db:reset`, `rm -rf`, dropping tables) without explicit
-  approval. Force-pushing is never allowed (see Git).
-- `db:reset` is for localhost only.
+- Never run destructive commands (`db:reset`, `db:reset:schema`, `docker compose down -v`,
+  `rm -rf`, dropping tables) without explicit approval. Force-pushing is never allowed (see Git).
+- `db:reset` deletes the local Docker volume, so all local database data. Never pass `--yes` on
+  the user's behalf without their approval. Both resets refuse `NODE_ENV=production` and any
+  non-local `DATABASE_URL` host.
 
 ## Skills available (in `.agents/skills/`)
 
