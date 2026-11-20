@@ -75,13 +75,14 @@ for all three systems · Bangla-first ad typography.
 
 ## Team
 
-| Member               | Role                                                          |
-| -------------------- | ------------------------------------------------------------- |
-| Shahriar Khan Sakib  | Team lead · platform architecture, auth, gateway, integration |
-| Asraful Islam Afridi | System 1 · client intake, operator console, brief artifacts   |
-| Anninda Raj Das      | System 2 · creative pipeline, compositing, QA                 |
-| Linkon Biswas        | System 3 · Zernio publishing, analytics, tracking             |
-| Munira Khondoker     | UI/UX · interactive prototype                                 |
+| Member                | Role                                                                              |
+| --------------------- | --------------------------------------------------------------------------------- |
+| Shahriar Khan Sakib   | Team lead, domain expert · platform architecture, auth, gateway, integration      |
+| Asraful Islam Afridi  | Full-stack developer · System 1: client intake, operator console, brief artifacts |
+| Anninda Raj Das       | Full-stack developer · System 2: creative pipeline, compositing, QA               |
+| Linkon Biswas         | AI/ML engineer · System 3: Zernio publishing, analytics, tracking                 |
+| Munira Khondoker      | Product / UX designer · interactive prototype                                     |
+| Kazi Mohaiminul Islam | Product / UX designer · Non-Resident Bangladeshi (USA), remote                    |
 
 All three systems were built in separate repositories and merged here **with their full Git
 history** (`git log -- systems/`).
