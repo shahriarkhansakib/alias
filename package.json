@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "turbo run dev",
+    "dev:all": "node scripts/dev-all.mjs",
+    "setup:systems": "node scripts/setup-systems.mjs",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "lint:biome": "biome lint .",

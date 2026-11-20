@@ -2,7 +2,7 @@
 const TOKEN_KEY = 'alias_auth_token';
 const SESSION_KEY = 'alias_auth_session';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/svc/creative';
 
 export interface UserSession {
   user: {

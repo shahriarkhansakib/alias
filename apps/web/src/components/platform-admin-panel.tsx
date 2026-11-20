@@ -7,7 +7,7 @@ import type {
   PlatformStatusResponse,
   ProvisionPlatformAdminResponse,
 } from '@alias/contracts';
-import { type FormEvent, useEffect, useState } from 'react';
+import { type FormEvent, type ReactNode, useEffect, useState } from 'react';
 import { PlatformSecurityCard } from './platform-security-card';
 import { SignOutButton } from './sign-out-button';
 
@@ -18,6 +18,7 @@ export function PlatformAdminPanel(props: {
   initialAdmins: PlatformAdminItem[];
   initialRequirePlatformMfa: boolean;
   initialPersonalMfaEnabled: boolean;
+  systemsSection?: ReactNode;
 }) {
   const [admins, setAdmins] = useState<PlatformAdminItem[]>(props.initialAdmins);
   const [activeAdminCount, setActiveAdminCount] = useState<number>(
@@ -94,6 +95,7 @@ export function PlatformAdminPanel(props: {
       </header>
 
       <main className="container stack-lg">
+        {props.systemsSection}
         <section className="card stack-md">
           <div className="row row-between">
             <div className="stack-sm">
