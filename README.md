@@ -38,6 +38,23 @@ Modular-monolith TypeScript foundation built with pnpm workspaces, Turborepo, Ne
    pnpm dev
    ```
 
+## Demo Accounts
+
+For local demos and judging, create two verified accounts (no email inbox needed):
+
+```bash
+pnpm db:migrate
+pnpm seed:demo
+```
+
+| Role | Email | Password | Lands on |
+| --- | --- | --- | --- |
+| Client | `demo@alias.local` | `AliasDemo#2026!` | `/dashboard` (links to Systems 1–3) |
+| Platform super admin | `admin@alias.local` | `AliasAdmin#2026!` | `/admin` |
+
+The command is idempotent and refuses to run when `NODE_ENV=production`. These are local test
+credentials only. The three systems themselves run as separate apps; see `systems/README.md`.
+
 ## Initial Super Admin Bootstrap
 
 Register and verify a user account first, then promote it via the advisory-locked CLI bootstrap:
