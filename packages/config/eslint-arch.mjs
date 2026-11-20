@@ -84,6 +84,7 @@ export default [
       '**/playwright-report/**',
       '**/test-results/**',
       'apps/api/drizzle/**',
+      'systems/**',
     ],
   },
   {

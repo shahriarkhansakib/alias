@@ -1,5 +1,27 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "API_PORT",
+    "API_HOST",
+    "WEB_PORT",
+    "API_INTERNAL_URL",
+    "DATABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "BETTER_AUTH_URL",
+    "WEB_ORIGIN",
+    "TRUSTED_ORIGINS",
+    "SMTP_HOST",
+    "SMTP_PORT",
+    "SMTP_SECURE",
+    "EMAIL_FROM",
+    "MAILPIT_API_URL",
+    "GOOGLE_CLIENT_ID",
+    "GOOGLE_CLIENT_SECRET",
+    "AUTH_RATE_LIMIT_ENABLED",
+    "LOG_LEVEL",
+    "CI"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],

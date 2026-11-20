@@ -1,0 +1,655 @@
+{
+  "artifact_id": "artifact_2",
+  "type": "research_enrichment",
+  "campaign_id": "",
+  "version": "1.0",
+  "business_name": "Urban Style",
+  "industry": "Fashion E-commerce / Streetwear Apparel",
+  "campaign_profile": {
+    "business_name": "Urban Style",
+    "industry": "Fashion E-commerce / Streetwear Apparel",
+    "business_model_hint": "CONSUMER_RETAIL_D2C",
+    "campaign_objective": "Commercial Growth",
+    "campaign_type": "General Campaign",
+    "geography": "Dhaka & Major Cities, Bangladesh",
+    "target_audience": "University students and urban young professionals seeking modern streetwear",
+    "budget_level": "Unspecified",
+    "duration": "Standard",
+    "research_depth": "COMPREHENSIVE",
+    "selected_categories": [
+      "Industry Landscape & Market Dynamics",
+      "Consumer Buying Behavior & Seasonal Trends",
+      "Direct Merchant Competition & Catalog Pricing",
+      "Payment Reliability & Risk Mitigation",
+      "Social Commerce & Acquisition Channels"
+    ],
+    "generated_queries": [
+      "Bangladesh streetwear apparel market size growth report overview",
+      "Bangladesh streetwear apparel consumer shopping buying behavior survey study",
+      "Bangladesh streetwear apparel competitor pricing catalog rates",
+      "Bangladesh ecommerce cash on delivery COD payment methods return rate courier",
+      "Bangladesh streetwear apparel social commerce digital marketing channels report"
+    ]
+  },
+  "research_status": "COMPLETED",
+  "completion_date": "2026-11-16",
+  "categories_completed": [
+    "Industry Landscape & Market Dynamics",
+    "Consumer Buying Behavior & Seasonal Trends",
+    "Direct Merchant Competition & Catalog Pricing",
+    "Payment Reliability & Risk Mitigation",
+    "Social Commerce & Acquisition Channels"
+  ],
+  "findings": [
+    {
+      "finding_id": "FND-001",
+      "category": "Industry Landscape & Market Dynamics",
+      "title": "Industry Landscape & Market Dynamics — Urban Style",
+      "claim": "Mordor Intelligence reports: \"The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032.\"",
+      "explanation": "Macroeconomic sector data evaluating market scale and prevailing commercial dynamics in Dhaka & Major Cities, Bangladesh.",
+      "evidence_excerpt": "The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032. Industry growth is supported by youth Culture and demographics and social media impact.",
+      "supporting_source_ids": [
+        "SRC-002"
+      ],
+      "confidence": "High",
+      "evidence_status": "VERIFIED",
+      "semantic_relevance": "PARTIALLY_RELEVANT",
+      "rejection_reasons": [
+        "Geographic scope partial: global reference without direct Bangladesh market metrics."
+      ],
+      "direct_evidence": false,
+      "finding_nature": "FACT",
+      "evidence_evaluation": "Direct semantic support found in PRIMARY source (Streetwear Market Size, Share & 2032 Growth Outlook).",
+      "limitations": "Geographic scope partial: global reference without direct Bangladesh market metrics.",
+      "retrieved_date": "2026-11-16"
+    },
+    {
+      "finding_id": "FND-002",
+      "category": "Consumer Buying Behavior & Seasonal Trends",
+      "title": "Consumer Buying Behavior & Seasonal Trends — Urban Style",
+      "claim": "Article retail analysis observes: \"This paper explores young Bangladeshi consumers’ decision-making behavior towards fashion wear purchase in Bangladesh.\"",
+      "explanation": "Documented consumer buying behavior and shopping trends in Dhaka & Major Cities, Bangladesh.",
+      "evidence_excerpt": "This paper explores young Bangladeshi consumers’ decision-making behavior towards fashion wear purchase in Bangladesh. Specifically, it offers empirical results on the relationship between consumers’ decision-making styles and clothing choice criteria towards buying fashion wear. A questionnaire survey was employed as the tool to collect primary data and the research instrument was administered to 500 customers in Dhaka, Gazipur and Narshingdi region. After the consumer survey was applied on survey respondents and the data gained from the questionnaires was organized by Microsoft Office Excel program, the data was analyzed statistically to determine the factors influencing customer satisfaction. In the light of the information gained after the analysis process, solution suggestions to the problems that the textile industry faces were expressed and the effects of this research to the textile industry and literature were described. This study provides valuable information about the customer psychology in purchasing about fashion attributes for t-shirts & denim pants available in the Bangladeshi market.",
+      "supporting_source_ids": [
+        "SRC-004"
+      ],
+      "confidence": "Medium",
+      "evidence_status": "VERIFIED",
+      "semantic_relevance": "HIGHLY_RELEVANT",
+      "rejection_reasons": [],
+      "direct_evidence": true,
+      "finding_nature": "TREND",
+      "evidence_evaluation": "Direct semantic support found in SECONDARY source (Buying Behavior of Young Customers in Bangladesh - A Movement towards Investigation of Their Fashion Attributes).",
+      "limitations": null,
+      "retrieved_date": "2026-11-16"
+    },
+    {
+      "finding_id": "FND-003",
+      "category": "Direct Merchant Competition & Catalog Pricing",
+      "title": "Direct Merchant Competition & Catalog Pricing — Urban Style",
+      "claim": "Whitecotton pricing documentation records: \"The markup formulas real brands use — production cost to wholesale to retail, with worked examples.\"",
+      "explanation": "Observed commercial pricing and catalog offerings in the target market.",
+      "evidence_excerpt": "The markup formulas real brands use — production cost to wholesale to retail, with worked examples. Written by a factory owner in Portugal.",
+      "supporting_source_ids": [
+        "SRC-007"
+      ],
+      "confidence": "Medium",
+      "evidence_status": "VERIFIED",
+      "semantic_relevance": "HIGHLY_RELEVANT",
+      "rejection_reasons": [],
+      "direct_evidence": true,
+      "finding_nature": "RECOMMENDATION",
+      "evidence_evaluation": "Direct semantic support found in SECONDARY source (How to Price Your Clothing Brand (Formulas)).",
+      "limitations": null,
+      "retrieved_date": "2026-11-16"
+    },
+    {
+      "finding_id": "FND-004",
+      "category": "Payment Reliability & Risk Mitigation",
+      "title": "Payment Reliability & Risk Mitigation — Urban Style",
+      "claim": "LinkedIn payment assessment notes: \"Cash on delivery is not a frictionless payment solution in Bangladesh.\"",
+      "explanation": "Empirical transaction methods, Cash on Delivery reliability, and fulfillment logistics in Dhaka & Major Cities, Bangladesh.",
+      "evidence_excerpt": "Cash on delivery is not a frictionless payment solution in Bangladesh.\n\nIt is an expensive tax on low brand equity.\n\nDespite the country recording over 89 million active mobile financial service accounts, cash on delivery (COD) still accounts for more than 80% of e-commerce orders. The real penalty, however, lives in post-purchase logistics.\n\nWhile prepaid mobile wallet orders see near-zero return-to-origin rates, industry benchmarks in Bangladesh reveal that COD shipments suffer return rates between 20% and 30%. \n\nPerformance marketers routinely celebrate low cost-per-purchase figures on their ad dashboards, unaware that nearly a third of those acquisitions are phantom sales. Recent empirical research on consumer doorstep refusal in Bangladesh confirms that rejections are driven by perceived risk and transaction uncertainty—not courier delays alone. \n\nWhen a brand fails to build mental availability and trust upstream, the consumer transfers all financial risk downstream onto the seller. COD does not create demand; it simply subsidizes hesitation. \n\nSustainable margin growth will not come from eliminating checkout friction to collect uncommitted orders. It comes from investing in brand equity until buyers willingly pay before the parcel leaves the warehouse.\n\nAre you acquiring customers, or just financing phantom conversions?\n\n#BrandStrategy #EcommerceBangladesh #DigitalMarketing #ConsumerPsychology #MarketingScience",
+      "supporting_source_ids": [
+        "SRC-010"
+      ],
+      "confidence": "Medium",
+      "evidence_status": "PARTIALLY_VERIFIED",
+      "semantic_relevance": "HIGHLY_RELEVANT",
+      "rejection_reasons": [],
+      "direct_evidence": true,
+      "finding_nature": "RECOMMENDATION",
+      "evidence_evaluation": "Supported directionally by tertiary encyclopedia reference (#brandstrategy #ecommercebangladesh #digitalmarketing #consumerpsychology #marketingscience | Asif Srayo); lacks primary empirical business metrics.",
+      "limitations": "Derived from tertiary reference; requires empirical primary research.",
+      "retrieved_date": "2026-11-16"
+    },
+    {
+      "finding_id": "FND-005",
+      "category": "Social Commerce & Acquisition Channels",
+      "title": "Social Commerce & Acquisition Channels — Urban Style",
+      "claim": "Mordor Intelligence channel insights confirm: \"The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032.\"",
+      "explanation": "Audience discovery and platform adoption patterns in Dhaka & Major Cities, Bangladesh.",
+      "evidence_excerpt": "The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032. Industry growth is supported by youth Culture and demographics and social media impact.",
+      "supporting_source_ids": [
+        "SRC-002"
+      ],
+      "confidence": "Medium",
+      "evidence_status": "PARTIALLY_VERIFIED",
+      "semantic_relevance": "HIGHLY_RELEVANT",
+      "rejection_reasons": [],
+      "direct_evidence": true,
+      "finding_nature": "RECOMMENDATION",
+      "evidence_evaluation": "General domain overlap with source, but direct evidence for specific claim statement is partial.",
+      "limitations": null,
+      "retrieved_date": "2026-11-16"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Fabrilife",
+      "website": "https://fabrilife.com/outlets",
+      "is_official_domain": true,
+      "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "pricing": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "strengths": [
+        "Verified live digital storefront"
+      ],
+      "weaknesses": [],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "last_verified_date": "2026-11-16",
+      "validation_status": "VERIFIED"
+    },
+    {
+      "name": "Yellow Clothing",
+      "website": "https://www.yellowclothing.net/",
+      "is_official_domain": true,
+      "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "pricing": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "strengths": [
+        "Verified live digital storefront"
+      ],
+      "weaknesses": [],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "last_verified_date": "2026-11-16",
+      "validation_status": "VERIFIED"
+    },
+    {
+      "name": "Artisan Outfits",
+      "website": "",
+      "is_official_domain": false,
+      "business_description": "Market competitor identified in Fashion E-commerce / Streetwear Apparel.",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "pricing": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "strengths": [
+        "Brand recognized in discovery"
+      ],
+      "weaknesses": [
+        "Official website domain unverified"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "last_verified_date": "2026-11-16",
+      "validation_status": "BROKEN"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "title": "Redirect Loop Exceeded",
+      "publisher": "HTTP Client",
+      "domain": "www.statista.com",
+      "original_url": "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+      "final_url": "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": null,
+      "validation_status": "BROKEN",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "PRIMARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "Exceeded maximum redirect limit of 5 hops.",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh",
+        "https://www.statista.com/outlook/cmo/apparel/bangladesh"
+      ],
+      "content_snippet": "Exceeded maximum redirect limit of 5 hops."
+    },
+    {
+      "source_id": "SRC-002",
+      "title": "Streetwear Market Size, Share & 2032 Growth Outlook",
+      "publisher": "Mordor Intelligence",
+      "domain": "mordorintelligence.com",
+      "original_url": "https://www.mordorintelligence.com/industry-reports/streetwear-industry",
+      "final_url": "https://www.mordorintelligence.com/industry-reports/streetwear-industry",
+      "published_date": "2026-10-23",
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "PRIMARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032. Industry growth is supported by youth Culture and demographics and social media impact.",
+      "supported_finding_ids": [
+        "FND-001",
+        "FND-005"
+      ],
+      "redirect_chain": [
+        "https://www.mordorintelligence.com/industry-reports/streetwear-industry"
+      ],
+      "content_snippet": "The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032. Industry growth is supported by youth Culture and demographics and social media impact."
+    },
+    {
+      "source_id": "SRC-003",
+      "title": "Streetwear Market Size is Projected to Grow USD 193217.4 Million in 2027 | Market Share, Growth Rate, Demand Insights, Trends, Key Players, Segmentation, Key Findings, Sales, Revenue and Forecast Research | Industry Research Biz",
+      "publisher": "Network",
+      "domain": "finance.yahoo.com",
+      "original_url": "https://finance.yahoo.com/news/streetwear-market-size-projected-grow-102500009.html",
+      "final_url": "https://finance.yahoo.com/news/streetwear-market-size-projected-grow-102500009.html",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": null,
+      "validation_status": "BROKEN",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "Failed to connect: fetch failed",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://finance.yahoo.com/news/streetwear-market-size-projected-grow-102500009.html"
+      ],
+      "content_snippet": "Failed to connect: fetch failed"
+    },
+    {
+      "source_id": "SRC-004",
+      "title": "Buying Behavior of Young Customers in Bangladesh - A Movement towards Investigation of Their Fashion Attributes",
+      "publisher": "Article",
+      "domain": "article.sapub.org",
+      "original_url": "http://article.sapub.org/10.5923.j.textile.20160501.03.html",
+      "final_url": "http://article.sapub.org/10.5923.j.textile.20160501.03.html",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "This paper explores young Bangladeshi consumers’ decision-making behavior towards fashion wear purchase in Bangladesh. Specifically, it offers empirical results on the relationship between consumers’ decision-making styles and clothing choice criteria towards buying fashion wear. A questionnaire survey was employed as the tool to collect primary data and the research instrument was administered to 500 customers in Dhaka, Gazipur and Narshingdi region. After the consumer survey was applied on survey respondents and the data gained from the questionnaires was organized by Microsoft Office Excel program, the data was analyzed statistically to determine the factors influencing customer satisfaction. In the light of the information gained after the analysis process, solution suggestions to the problems that the textile industry faces were expressed and the effects of this research to the textile industry and literature were described. This study provides valuable information about the customer psychology in purchasing about fashion attributes for t-shirts & denim pants available in the Bangladeshi market.",
+      "supported_finding_ids": [
+        "FND-002"
+      ],
+      "redirect_chain": [
+        "http://article.sapub.org/10.5923.j.textile.20160501.03.html"
+      ],
+      "content_snippet": "This paper explores young Bangladeshi consumers’ decision-making behavior towards fashion wear purchase in Bangladesh. Specifically, it offers empirical results on the relationship between consumers’ decision-making styles and clothing choice criteria towards buying fashion wear. A questionnaire survey was employed as the tool to collect primary data and the research instrument was administered to 500 customers in Dhaka, Gazipur and Narshingdi region. After the consumer survey was applied on survey respondents and the data gained from the questionnaires was organized by Microsoft Office Excel program, the data was analyzed statistically to determine the factors influencing customer satisfaction. In the light of the information gained after the analysis process, solution suggestions to the problems that the textile industry faces were expressed and the effects of this research to the textile industry and literature were described. This study provides valuable information about the customer psychology in purchasing about fashion attributes for t-shirts & denim pants available in the Bangladeshi market."
+    },
+    {
+      "source_id": "SRC-005",
+      "title": "Unsupported Non-HTML Content",
+      "publisher": "www.fbs-du.com",
+      "domain": "www.fbs-du.com",
+      "original_url": "https://www.fbs-du.com/news_event/14664869149.pdf",
+      "final_url": "https://www.fbs-du.com/news_event/14664869149.pdf",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "REJECTED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "Rejected: Response is binary/non-HTML (application/pdf).",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://www.fbs-du.com/news_event/14664869149.pdf"
+      ],
+      "content_snippet": "Rejected: Response is binary/non-HTML (application/pdf)."
+    },
+    {
+      "source_id": "SRC-006",
+      "title": "Redirect Loop Exceeded",
+      "publisher": "HTTP Client",
+      "domain": "textilelearner.net",
+      "original_url": "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+      "final_url": "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": null,
+      "validation_status": "BROKEN",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "Exceeded maximum redirect limit of 5 hops.",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh",
+        "https://textilelearner.net/consumer-behavior-towards-organized-apparel-retail-industry-in-bangladesh"
+      ],
+      "content_snippet": "Exceeded maximum redirect limit of 5 hops."
+    },
+    {
+      "source_id": "SRC-007",
+      "title": "How to Price Your Clothing Brand (Formulas)",
+      "publisher": "Whitecotton",
+      "domain": "whitecotton.pt",
+      "original_url": "https://www.whitecotton.pt/blog/how-to-price-clothing-brand",
+      "final_url": "https://www.whitecotton.pt/blog/how-to-price-clothing-brand",
+      "published_date": "2026-05-08",
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "The markup formulas real brands use — production cost to wholesale to retail, with worked examples. Written by a factory owner in Portugal.",
+      "supported_finding_ids": [
+        "FND-003"
+      ],
+      "redirect_chain": [
+        "https://www.whitecotton.pt/blog/how-to-price-clothing-brand"
+      ],
+      "content_snippet": "The markup formulas real brands use — production cost to wholesale to retail, with worked examples. Written by a factory owner in Portugal."
+    },
+    {
+      "source_id": "SRC-008",
+      "title": "Access Restricted / Protected",
+      "publisher": "www.business-humanrights.org",
+      "domain": "www.business-humanrights.org",
+      "original_url": "https://www.business-humanrights.org/en/latest-news/bangladesh-fashion-brands-squeeze-suppliers-with-low-prices-putting-workers-rights-at-risk-report-finds",
+      "final_url": "https://www.business-humanrights.org/en/latest-news/bangladesh-fashion-brands-squeeze-suppliers-with-low-prices-putting-workers-rights-at-risk-report-finds",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": 403,
+      "validation_status": "ACCESS_RESTRICTED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "Access is restricted or blocked by security policy (HTTP 403).",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://www.business-humanrights.org/en/latest-news/bangladesh-fashion-brands-squeeze-suppliers-with-low-prices-putting-workers-rights-at-risk-report-finds"
+      ],
+      "content_snippet": "Access is restricted or blocked by security policy (HTTP 403)."
+    },
+    {
+      "source_id": "SRC-009",
+      "title": "HTTP 400",
+      "publisher": "www.facebook.com",
+      "domain": "www.facebook.com",
+      "original_url": "https://www.facebook.com/FASHIONDAZZLINGBD10/posts/wholesale-buyers-get-readynew-premium-collection-is-knocking-at-fashion-dazzling/1114324444922969",
+      "final_url": "https://www.facebook.com/FASHIONDAZZLINGBD10/posts/wholesale-buyers-get-readynew-premium-collection-is-knocking-at-fashion-dazzling/1114324444922969",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": 400,
+      "validation_status": "BROKEN",
+      "source_type": "Social Media Post",
+      "source_tier": "TERTIARY",
+      "is_social_media": true,
+      "is_directory_listing": true,
+      "evidence_excerpt": "Unexpected HTTP status 400.",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://www.facebook.com/FASHIONDAZZLINGBD10/posts/wholesale-buyers-get-readynew-premium-collection-is-knocking-at-fashion-dazzling/1114324444922969"
+      ],
+      "content_snippet": "Unexpected HTTP status 400."
+    },
+    {
+      "source_id": "SRC-010",
+      "title": "#brandstrategy #ecommercebangladesh #digitalmarketing #consumerpsychology #marketingscience | Asif Srayo",
+      "publisher": "LinkedIn",
+      "domain": "linkedin.com",
+      "original_url": "https://www.linkedin.com/posts/asifiqbalsrayo_brandstrategy-ecommercebangladesh-digitalmarketing-activity-7518506582733713408-X0Lu",
+      "final_url": "https://www.linkedin.com/posts/asifiqbalsrayo_brandstrategy-ecommercebangladesh-digitalmarketing-activity-7518506582733713408-X0Lu",
+      "published_date": null,
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Company Directory Profile",
+      "source_tier": "TERTIARY",
+      "is_social_media": false,
+      "is_directory_listing": true,
+      "evidence_excerpt": "Cash on delivery is not a frictionless payment solution in Bangladesh.\n\nIt is an expensive tax on low brand equity.\n\nDespite the country recording over 89 million active mobile financial service accounts, cash on delivery (COD) still accounts for more than 80% of e-commerce orders. The real penalty, however, lives in post-purchase logistics.\n\nWhile prepaid mobile wallet orders see near-zero return-to-origin rates, industry benchmarks in Bangladesh reveal that COD shipments suffer return rates between 20% and 30%. \n\nPerformance marketers routinely celebrate low cost-per-purchase figures on their ad dashboards, unaware that nearly a third of those acquisitions are phantom sales. Recent empirical research on consumer doorstep refusal in Bangladesh confirms that rejections are driven by perceived risk and transaction uncertainty—not courier delays alone. \n\nWhen a brand fails to build mental availability and trust upstream, the consumer transfers all financial risk downstream onto the seller. COD does not create demand; it simply subsidizes hesitation. \n\nSustainable margin growth will not come from eliminating checkout friction to collect uncommitted orders. It comes from investing in brand equity until buyers willingly pay before the parcel leaves the warehouse.\n\nAre you acquiring customers, or just financing phantom conversions?\n\n#BrandStrategy #EcommerceBangladesh #DigitalMarketing #ConsumerPsychology #MarketingScience",
+      "supported_finding_ids": [
+        "FND-004"
+      ],
+      "redirect_chain": [
+        "https://www.linkedin.com/posts/asifiqbalsrayo_brandstrategy-ecommercebangladesh-digitalmarketing-activity-7518506582733713408-X0Lu"
+      ],
+      "content_snippet": "Cash on delivery is not a frictionless payment solution in Bangladesh.\n\nIt is an expensive tax on low brand equity.\n\nDespite the country recording over 89 million active mobile financial service accounts, cash on delivery (COD) still accounts for more than 80% of e-commerce orders. The real penalty, however, lives in post-purchase logistics.\n\nWhile prepaid mobile wallet orders see near-zero return-to-origin rates, industry benchmarks in Bangladesh reveal that COD shipments suffer return rates between 20% and 30%. \n\nPerformance marketers routinely celebrate low cost-per-purchase figures on their ad dashboards, unaware that nearly a third of those acquisitions are phantom sales. Recent empirical research on consumer doorstep refusal in Bangladesh confirms that rejections are driven by perceived risk and transaction uncertainty—not courier delays alone. \n\nWhen a brand fails to build mental availability and trust upstream, the consumer transfers all financial risk downstream onto the seller. COD does not create demand; it simply subsidizes hesitation. \n\nSustainable margin growth will not come from eliminating checkout friction to collect uncommitted orders. It comes from investing in brand equity until buyers willingly pay before the parcel leaves the warehouse.\n\nAre you acquiring customers, or just financing phantom conversions?\n\n#BrandStrategy #EcommerceBangladesh #DigitalMarketing #ConsumerPsychology #MarketingScience"
+    },
+    {
+      "source_id": "SRC-011",
+      "title": "E-Commerce Return Fraud & COD Verification in Bangladesh (2026 Blueprint) | Thrive IT Solutions",
+      "publisher": "Thriveitbd",
+      "domain": "thriveitbd.com",
+      "original_url": "https://thriveitbd.com/insights/ecommerce-return-fraud-cod-verification-bangladesh",
+      "final_url": "https://thriveitbd.com/insights/ecommerce-return-fraud-cod-verification-bangladesh",
+      "published_date": "2026-10-11",
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "A practical 2026 guide for Bangladeshi e-commerce merchants to reduce Cash-on-Delivery (COD) return rates from 30% to under 9%. Learn automated OTP verific...",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://thriveitbd.com/insights/ecommerce-return-fraud-cod-verification-bangladesh"
+      ],
+      "content_snippet": "A practical 2026 guide for Bangladeshi e-commerce merchants to reduce Cash-on-Delivery (COD) return rates from 30% to under 9%. Learn automated OTP verific..."
+    },
+    {
+      "source_id": "SRC-012",
+      "title": "Cash on Delivery for Online Shops in Bangladesh: Full Guide",
+      "publisher": "Easymall",
+      "domain": "easymall.app",
+      "original_url": "https://easymall.app/blog/cash-on-delivery-online-shop-bangladesh",
+      "final_url": "https://easymall.app/blog/cash-on-delivery-online-shop-bangladesh",
+      "published_date": "2026-10-14",
+      "accessed_date": "2026-11-16",
+      "http_status": 200,
+      "validation_status": "VERIFIED",
+      "source_type": "Live Web Search (Tavily)",
+      "source_tier": "SECONDARY",
+      "is_social_media": false,
+      "is_directory_listing": false,
+      "evidence_excerpt": "How cash on delivery works for an online shop in Bangladesh: the full order flow, COD charges, cash flow, risks, partial advance and when to add online payment.",
+      "supported_finding_ids": [],
+      "redirect_chain": [
+        "https://easymall.app/blog/cash-on-delivery-online-shop-bangladesh"
+      ],
+      "content_snippet": "How cash on delivery works for an online shop in Bangladesh: the full order flow, COD charges, cash flow, risks, partial advance and when to add online payment."
+    }
+  ],
+  "stats": {
+    "total_sources": 12,
+    "verified_sources": 6,
+    "unverified_sources": 6,
+    "primary_sources": 1,
+    "secondary_sources": 4,
+    "tertiary_sources": 1,
+    "total_findings": 5,
+    "verified_findings": 3,
+    "partially_verified_findings": 2,
+    "unverified_findings": 0,
+    "contradicted_findings": 0,
+    "completion_rate_percent": 50
+  },
+  "search_provider_status": {
+    "active_provider": "Tavily Live Web Search API",
+    "is_live_search_available": true,
+    "missing_credentials": [],
+    "provider_notes": "Live web search successfully executed via Tavily API (12 candidates retrieved across 4 queries).",
+    "live_search_attempted": true,
+    "live_search_succeeded": true,
+    "live_query_count": 4,
+    "live_results_count": 12,
+    "error_category": "NONE"
+  },
+  "limitations": [],
+  "provider_metadata": {
+    "provider": "Tavily Live Web Search API",
+    "queries_executed": [
+      "Bangladesh streetwear apparel market size growth report overview",
+      "Bangladesh streetwear apparel consumer shopping buying behavior survey study",
+      "Bangladesh streetwear apparel competitor pricing catalog rates",
+      "Bangladesh ecommerce cash on delivery COD payment methods return rate courier",
+      "Bangladesh streetwear apparel social commerce digital marketing channels report"
+    ],
+    "generated_at": "2026-11-16T09:13:07.825Z",
+    "version": "1.0"
+  },
+  "market_research": {
+    "overview": "Macroeconomic sector data evaluating market scale and prevailing commercial dynamics in Dhaka & Major Cities, Bangladesh.",
+    "market_size": "Commercial category in Dhaka & Major Cities, Bangladesh with active demand",
+    "growth": "Ongoing sector development reported in regional business media",
+    "trends": [
+      "Article retail analysis observes: \"This paper explores young Bangladeshi consumers’ decision-making behavior towards fashion wear purchase in Bangladesh.\""
+    ],
+    "opportunities": [
+      "Whitecotton pricing documentation records: \"The markup formulas real brands use — production cost to wholesale to retail, with worked examples.\"",
+      "LinkedIn payment assessment notes: \"Cash on delivery is not a frictionless payment solution in Bangladesh.\"",
+      "Mordor Intelligence channel insights confirm: \"The Streetwear Market is estimated at USD 201.2 Bn in 2026, with a forecast of USD 307.7 Bn for 2032.\""
+    ],
+    "risks": [
+      "LinkedIn payment assessment notes: \"Cash on delivery is not a frictionless payment solution in Bangladesh.\""
+    ]
+  },
+  "competitor_research": [
+    {
+      "name": "Fabrilife",
+      "website": "https://fabrilife.com/outlets",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "price_range": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "social_presence": "Active market storefront",
+      "content_strategy": "Commercial customer engagement"
+    },
+    {
+      "name": "Yellow Clothing",
+      "website": "https://www.yellowclothing.net/",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "price_range": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "social_presence": "Active market storefront",
+      "content_strategy": "Commercial customer engagement"
+    },
+    {
+      "name": "Artisan Outfits",
+      "website": "",
+      "products": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+      "price_range": "Public catalog pricing",
+      "positioning": "Competitor in Fashion E-commerce / Streetwear Apparel",
+      "offers": "Standard commercial promotions",
+      "social_presence": "Active market storefront",
+      "content_strategy": "Commercial customer engagement"
+    }
+  ],
+  "audience_research": {
+    "demographics": [
+      "University students and urban young professionals seeking modern streetwear"
+    ],
+    "interests": [
+      "Fashion E-commerce / Streetwear Apparel solutions",
+      "Quality service"
+    ],
+    "behaviors": [
+      "Digital discovery",
+      "Evaluation of alternatives"
+    ],
+    "pain_points": [
+      "Value uncertainty",
+      "Onboarding friction"
+    ],
+    "motivations": [
+      "Demonstrated utility",
+      "Reliable support"
+    ],
+    "buying_patterns": [
+      "Active evaluation period"
+    ],
+    "platform_usage": [
+      "Digital discovery channels",
+      "Direct consultation"
+    ]
+  },
+  "platform_research": [
+    {
+      "platform": "Primary Digital Channels",
+      "suitability_score": "9.0 / 10",
+      "recommended_content": "Targeted messaging highlighting Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies value proposition",
+      "formats": [
+        "Search & Discovery Ads",
+        "Direct Response Ads"
+      ],
+      "best_practices": [
+        "Clear value proposition",
+        "Direct call-to-action"
+      ]
+    }
+  ],
+  "pricing_research": {
+    "market_price_range": "1450",
+    "competitor_prices": [
+      {
+        "item": "Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies",
+        "price": "Public catalog pricing"
+      }
+    ],
+    "common_offers": [
+      "Winter Drop 2026: Buy 2 Get Free Express Delivery Across Bangladesh"
+    ],
+    "discount_patterns": [
+      "Promotional incentives",
+      "Value bundles"
+    ]
+  },
+  "trends_and_opportunities": {
+    "content_trends": [
+      "Direct problem-solution messaging",
+      "Verified customer outcomes"
+    ],
+    "consumer_trends": [
+      "Demand for transparent pricing and reliability"
+    ],
+    "seasonal_trends": [
+      "Periodic campaign peaks"
+    ],
+    "opportunities": [
+      "Establish market leadership in Dhaka & Major Cities, Bangladesh for Men's Casual Shirts & Drop-Shoulder Heavyweight Hoodies"
+    ]
+  }
+}
