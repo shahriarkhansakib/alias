@@ -12,6 +12,8 @@ paths:
   commit both. Use the `db-migration` skill.
 - Never edit or delete a migration that has been merged to `main`; add a new one instead.
 - Migrations are forward-only and must be safe on a database that already has data.
-- Customer-owned tables carry the tenant id and index it; queries always filter by it.
-- Store money as integer minor units plus a currency code, never floats.
+- Planned: tenancy. There is no tenant or organization concept yet, so do not invent one. Once
+  it exists, customer-owned tables carry the tenant id and index it, and queries filter by it.
+- From now on: store money as integer minor units plus a currency code, never floats (no money
+  columns exist yet).
 - New tables use the shared UUIDv7 generator (`apps/api/src/shared/id.ts`) (`generateId()`) for primary keys.

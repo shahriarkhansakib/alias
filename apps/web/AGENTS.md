@@ -19,8 +19,9 @@ talks to the web app's own address and login cookies stay first-party.
 - Fetch data on the server (Server Components, route handlers) where possible; never expose secrets
   to client components (only `NEXT_PUBLIC_*` variables reach the browser).
 - Route protection is a convenience; the API is the real authority. Never trust the client for roles.
-- Every user-facing string should be ready for Bangla and English; do not hard-code layout to one
-  language's text length.
+- Layout guideline: Bangla support is planned. Until an i18n mechanism exists, strings are plain
+  English (`<html lang="en">`); do not add a translation library on your own. Build layouts that
+  still work when text gets longer: no fixed widths sized to English labels.
 - Accessibility: every interactive element is reachable by keyboard and has an accessible name.
 
 ## Tests

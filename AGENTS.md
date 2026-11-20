@@ -43,6 +43,7 @@ pnpm lint                     # Biome + architecture boundaries
 pnpm typecheck
 pnpm test                     # unit + integration
 pnpm test:e2e                 # Playwright
+pnpm test:scripts             # tests for scripts/ (agent config sync)
 pnpm format                   # Biome format
 pnpm agents:sync              # regenerate tool-specific agent files after editing .agents/
 ```
@@ -62,14 +63,34 @@ and report the results honestly — including failures.
 5. **Never invent.** Do not invent APIs, env vars, table names or library features. Check the code
    or the official docs; if unsure, say so.
 
-## Architecture rules (enforced by `pnpm lint:arch`)
+## Architecture rules
 
-- API modules have four layers: `domain/` (pure logic) ← `application/` (use cases) ←
-  `infrastructure/` (DB, external services) and `http/` (routes). Inner layers never import outer.
-- Other code imports a module only through its `index.ts`.
-- `apps/web` never imports from `apps/api`; both share types only through `packages/contracts`.
-- Every row belonging to a customer carries its tenant id; every query filters by it.
-- Every LLM output is validated against a schema before it is used or stored.
+API modules have up to four layers: `domain/` (pure logic) ← `application/` (use cases) ←
+`infrastructure/` (DB, external services) and `http/` (routes). See `apps/api/AGENTS.md`.
+
+### Enforced by lint (`pnpm lint:arch`, `packages/config/eslint-arch.mjs`)
+
+- `domain/` and `application/` never import `infrastructure/`, `http/`, `src/db`, `shared/http`,
+  `shared/email`, or Hono, Drizzle, `pg`, Better Auth, nodemailer, pino or Scalar.
+- A module imports another module only through its `index.ts`. This covers modules listed in
+  `MODULES` in `eslint-arch.mjs`; add new modules there.
+- `authn` never imports any other module.
+- A module's `infrastructure/schema.ts` may import another module only through that module's
+  `infrastructure/schema.ts` (for foreign keys).
+- `apps/web` never imports from `apps/api` or server libraries (Drizzle, `pg`, Hono, server-side
+  Better Auth, nodemailer, pino).
+- `packages/contracts` imports only `zod`.
+
+### Conventions (not enforced; reviewers check them)
+
+- Both apps share types only through `packages/contracts`.
+- Routes parse input with contract schemas and call a use case; no business rules in routes.
+- Code outside `src/modules/` (for example `src/scripts/`) should also use module barrels; the
+  lint rules do not cover it.
+- Planned, no tenant concept exists yet: once tenancy exists, every customer-owned row carries
+  its tenant id and every query filters by it. Do not invent a tenant model in the meantime.
+- Planned, no LLM calls exist yet: every LLM output is validated against a schema before it is
+  used or stored.
 
 ## Testing
 
