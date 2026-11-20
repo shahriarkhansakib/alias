@@ -25,6 +25,8 @@
     "db:migrate": "pnpm --filter @alias/api db:migrate",
     "db:reset": "pnpm --filter @alias/api db:reset",
     "bootstrap:admin": "pnpm --filter @alias/api bootstrap:admin",
+    "agents:sync": "node scripts/sync-agent-config.mjs",
+    "agents:check": "node scripts/sync-agent-config.mjs --check",
     "prepare": "husky"
   },
   "lint-staged": {

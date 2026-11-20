@@ -80,6 +80,9 @@ jobs:
       - name: Lint architectural boundaries
         run: pnpm lint:arch
 
+      - name: Check agent config is in sync
+        run: pnpm agents:check
+
       - name: Typecheck
         run: pnpm typecheck
 
