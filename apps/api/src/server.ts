@@ -2,7 +2,10 @@ import { serve } from '@hono/node-server';
 import { createApiApp } from './app.js';
 import { createDatabase } from './db/client.js';
 import { describeDatabaseError } from './db/connection-error.js';
-import { createNodemailerMailer } from './shared/email/nodemailer-mailer.js';
+import {
+  createNodemailerMailer,
+  DEVELOPMENT_SMTP_TIMEOUTS,
+} from './shared/email/nodemailer-mailer.js';
 import { loadEnv } from './shared/env.js';
 import { createLogger } from './shared/logger.js';
 
@@ -22,6 +25,7 @@ const mailer = createNodemailerMailer({
   from: env.emailFrom,
   user: env.smtpUser,
   pass: env.smtpPass,
+  timeouts: env.nodeEnv === 'development' ? DEVELOPMENT_SMTP_TIMEOUTS : undefined,
 });
 
 const { app } = createApiApp({
