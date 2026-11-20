@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "turbo run dev --output-logs=new-only",
+    "dev:stream": "turbo run dev --ui=stream --output-logs=new-only",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "lint:biome": "biome lint .",

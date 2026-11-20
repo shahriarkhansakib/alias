@@ -23,7 +23,13 @@ Requires Node.js >= 22.14, pnpm (the version in `package.json` `packageManager`)
    ```
 
    Mailpit's inbox, where verification and password-reset emails arrive, is at
-   http://localhost:8025 (`MAILPIT_HTTP_PORT`).
+   http://localhost:8025 by default. If your `.env` sets `MAILPIT_HTTP_PORT` (or
+   `POSTGRES_PORT`, `MAILPIT_SMTP_PORT`), the ports differ; find the real ones with:
+
+   ```sh
+   docker compose ps             # PORTS column, e.g. 0.0.0.0:18025->8025/tcp
+   docker compose port mailpit 8025   # just the Mailpit web UI address, e.g. 0.0.0.0:18025
+   ```
 2. Install workspace dependencies:
 
    ```sh
@@ -49,16 +55,17 @@ Requires Node.js >= 22.14, pnpm (the version in `package.json` `packageManager`)
    ```
 
    (Or run `pnpm db:reset` on localhost to drop/recreate schemas, apply all migrations, and seed system roles.)
-5. Start development servers (web on http://localhost:3000, API on http://localhost:4000):
+5. Start development servers (web on http://localhost:3000, API on http://localhost:4000).
+   There are two output modes; both skip replaying cached build logs (`--output-logs=new-only`):
 
-   ```sh
-   pnpm dev
-   ```
+   | Command           | Output                                                                                                                                                                    |
+   | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `pnpm dev`        | Turborepo's terminal UI: one pane per app. Use the arrow keys to pick a pane, `Ctrl+C` to stop everything. Text inside panes is hard to select and copy.                  |
+   | `pnpm dev:stream` | Plain lines prefixed with the app name (`@alias/api:dev: …`), all apps interleaved. Easy to copy, search and paste into an issue. Use it when you need to share an error. |
 
-   In a terminal, Turborepo shows its terminal UI with one pane per app: use the arrow keys to pick
-   a pane, and `Ctrl+C` to stop everything. Cached build logs of dependencies are not replayed
-   (`--output-logs=new-only`). Without a terminal (CI, piped output) Turborepo prints plain
-   prefixed lines instead.
+   Without a terminal (CI, piped output) `pnpm dev` also falls back to plain lines.
+
+   If something does not start, run `pnpm doctor` (see below).
 
 ### Logging
 
