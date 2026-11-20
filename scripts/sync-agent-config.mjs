@@ -56,7 +56,7 @@ function isText(rel) {
 
 /** Strips a UTF-8 byte-order mark and converts CRLF / CR line endings to LF. */
 function normalizeText(text) {
-  return text.replace(/^﻿/, '').replace(/\r\n?/g, '\n');
+  return text.replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n');
 }
 
 function readText(rel) {
