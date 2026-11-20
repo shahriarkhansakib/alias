@@ -36,11 +36,13 @@ src/
   scripts/
     bootstrap-admin.ts   pnpm bootstrap:admin -- --email <email>: create the first super_admin
   shared/
-    env.ts               loadEnv(): validated environment config; read env vars through it
+    env.ts               loadEnv(): validated environment config; read env vars through it.
+                         parseEnv() / formatEnvError() for the readable error report
     errors.ts            AppError and its subclasses: ValidationError, UnauthorizedError,
                          ForbiddenError, NotFoundError, ConflictError, RateLimitError, InternalError
     id.ts                generateId(): UUIDv7 primary keys
-    logger.ts            pino logger with redaction of cookies, tokens, passwords and secrets
+    logger.ts            createLogger(level, { pretty }): pino with redaction of cookies,
+                         tokens, passwords and secrets
     ports.ts             MailerPort, UnitOfWork, TransactionContext
     email/               nodemailer MailerPort adapter
     http/                createOpenAPIApp() and the Hono AppEnv type
@@ -71,6 +73,24 @@ only modules listed there.
   `audit_logs` row in the same `UnitOfWork` transaction. Rejected attempts are audited too, after
   the rollback (see `platform-admin`'s `runWithRejectionAudit`).
 - Schema changes go through the `db-migration` skill; never edit an applied migration.
+
+## Running and logging
+
+Run steps: `docker compose up -d --wait`, copy `.env.example` to `.env` (root), `pnpm db:migrate`,
+`pnpm dev` (API on `API_PORT`, default 4000). See the root `README.md`.
+
+- **Environment.** `loadEnv()` validates with the Zod schema in `shared/env.ts`. If anything is
+  missing or invalid it prints one line per problem (`z.prettifyError`) and a hint to copy
+  `.env.example`, then exits with code 1, without a stack trace. Add new variables to the schema,
+  to `.env.example`, and to `globalPassThroughEnv` in `turbo.json` (Turborepo strips variables it
+  does not know about).
+- **Logging.** Server code uses the injected `Logger` (pino), not `console.*`; the one-shot CLI
+  scripts (`db/migrate.ts`, `db/reset.ts`, `scripts/bootstrap-admin.ts`) print with `console`. `server.ts`
+  pretty-prints only when `NODE_ENV=development` (pino-pretty: one coloured line,
+  `HH:MM:ss.l LEVEL [requestId] message {fields}`); production and test print JSON lines.
+  `LOG_LEVEL` sets the level. `app.ts` logs every request once on completion with its
+  `requestId`, method, path, status and duration. Pass personal data only in fields covered by
+  `REDACT_PATHS`, and never log it at `info` or above.
 
 ## Tests
 

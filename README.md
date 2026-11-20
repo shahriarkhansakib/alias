@@ -14,17 +14,34 @@ Modular-monolith TypeScript foundation built with pnpm workspaces, Turborepo, Ne
 
 ## Local Development Setup
 
+Requires Node.js >= 22.14, pnpm (the version in `package.json` `packageManager`) and Docker.
+
 1. Start PostgreSQL 18 and Mailpit:
 
    ```sh
    docker compose up -d --wait
    ```
+
+   Mailpit's inbox, where verification and password-reset emails arrive, is at
+   http://localhost:8025 (`MAILPIT_HTTP_PORT`).
 2. Install workspace dependencies:
 
    ```sh
    pnpm install
    ```
-3. Configure `.env` from `.env.example` (already provisioned locally if created during bootstrap).
+3. Create `.env` in the repository root by copying `.env.example`, then fill in the values.
+   `BETTER_AUTH_SECRET` must be at least 32 random characters. If a required variable is missing
+   or invalid, every API command (`dev`, `db:migrate`, `bootstrap:admin`, …) stops with a short
+   list of the problems and exits with code 1:
+
+   ```text
+   Invalid environment configuration (1 problem):
+
+   ✖ Missing: set it to your Postgres connection URL
+     → at DATABASE_URL
+
+   Copy .env.example to .env in the repository root and fill in the values, or set the variables in your shell.
+   ```
 4. Apply reviewed forward-only SQL migrations and seed system roles:
 
    ```sh
@@ -32,11 +49,28 @@ Modular-monolith TypeScript foundation built with pnpm workspaces, Turborepo, Ne
    ```
 
    (Or run `pnpm db:reset` on localhost to drop/recreate schemas, apply all migrations, and seed system roles.)
-5. Start development servers:
+5. Start development servers (web on http://localhost:3000, API on http://localhost:4000):
 
    ```sh
    pnpm dev
    ```
+
+   In a terminal, Turborepo shows its terminal UI with one pane per app: use the arrow keys to pick
+   a pane, and `Ctrl+C` to stop everything. Cached build logs of dependencies are not replayed
+   (`--output-logs=new-only`). Without a terminal (CI, piped output) Turborepo prints plain
+   prefixed lines instead.
+
+### Logging
+
+The API logs with pino, at the level set by `LOG_LEVEL` (default `info`):
+
+- `NODE_ENV=development`: one coloured line per entry through pino-pretty, for example
+  `[14:03:07.183] INFO: [01a1fadf-…] HTTP request completed {"method":"GET","path":"/api/v1/me","status":401,"durationMs":13}`.
+  The request id in brackets matches the `x-request-id` response header.
+- `NODE_ENV=production` and `test`: one JSON object per line, for log collectors.
+
+Every request is logged once when it completes. Cookies, authorization headers, passwords,
+tokens and secrets are redacted (`[REDACTED]`) in both formats.
 
 ## Initial Super Admin Bootstrap
 
