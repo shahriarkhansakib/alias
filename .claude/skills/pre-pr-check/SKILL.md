@@ -11,7 +11,7 @@ These are the steps of `.github/workflows/ci.yml`, in the same order. If CI chan
 `ci.yml`, and update this list. Run them from the repository root and report each result
 honestly, including failures. Stop at the first failure, fix it, and start again.
 
-Steps 8, 9 and 12 need the local services: `docker compose up -d --wait` (Postgres 18 + Mailpit).
+Steps 9, 10 and 13 need the local services: `docker compose up -d --wait` (Postgres 18 + Mailpit).
 
 | # | CI step | Command |
 | --- | --- | --- |
@@ -20,15 +20,14 @@ Steps 8, 9 and 12 need the local services: `docker compose up -d --wait` (Postgr
 | 3 | Lint with Biome | `pnpm lint:biome` |
 | 4 | Lint architectural boundaries | `pnpm lint:arch` |
 | 5 | Check agent config is in sync | `pnpm agents:check` (if it fails, run `pnpm agents:sync` and commit the result) |
-| 6 | Typecheck | `pnpm typecheck` |
-| 7 | Run unit tests | `pnpm test:unit` |
-| 8 | Run database migrations | `pnpm db:migrate` |
-| 9 | Run PostgreSQL integration tests | `pnpm test:integration` (resets the local database) |
-| 10 | Build packages and apps | `pnpm build` |
-| 11 | Install Playwright Chromium | `pnpm --filter @alias/web exec playwright install chromium` (once per machine; CI adds `--with-deps`) |
-| 12 | Run Playwright E2E tests | `pnpm test:e2e` |
-
-Not in CI yet: if you changed `scripts/`, also run `pnpm test:scripts`.
+| 6 | Test repository scripts | `pnpm test:scripts` |
+| 7 | Typecheck | `pnpm typecheck` |
+| 8 | Run unit tests | `pnpm test:unit` |
+| 9 | Run database migrations | `pnpm db:migrate` |
+| 10 | Run PostgreSQL integration tests | `pnpm test:integration` (resets the local database) |
+| 11 | Build packages and apps | `pnpm build` |
+| 12 | Install Playwright Chromium | `pnpm --filter @alias/web exec playwright install chromium` (once per machine; CI adds `--with-deps`) |
+| 13 | Run Playwright E2E tests | `pnpm test:e2e` |
 
 ## 2. Confirm before committing
 

@@ -83,6 +83,9 @@ jobs:
       - name: Check agent config is in sync
         run: pnpm agents:check
 
+      - name: Test repository scripts
+        run: pnpm test:scripts
+
       - name: Typecheck
         run: pnpm typecheck
 
