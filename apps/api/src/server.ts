@@ -6,7 +6,7 @@ import { loadEnv } from './shared/env.js';
 import { createLogger } from './shared/logger.js';
 
 const env = loadEnv();
-const logger = createLogger(env.logLevel);
+const logger = createLogger(env.logLevel, { pretty: env.nodeEnv === 'development' });
 const database = createDatabase(env.databaseUrl);
 const mailer = createNodemailerMailer({
   host: env.smtpHost,
