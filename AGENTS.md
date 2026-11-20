@@ -119,8 +119,10 @@ are next changed. API unit tests (`*.unit.test.ts`) sit next to the code; API in
 
 ## Security
 
-- **Never read, print or commit `.env`, `.env.local` or any secret.** Use `.env.example` to learn
-  which variables exist. Never paste real keys into code, tests, logs or chat.
+- **Never read, print or commit any env file other than `.env.example`, or any secret.** Use
+  `.env.example` to learn which variables exist. Never paste real keys into code, tests, logs or
+  chat. Claude Code also denies these reads in `.claude/settings.json`; see
+  `docs/agents/README.md` for what that does and does not block.
 - Never run destructive commands (`db:reset`, `rm -rf`, dropping tables) without explicit
   approval. Force-pushing is never allowed (see Git).
 - `db:reset` is for localhost only.
