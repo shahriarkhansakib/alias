@@ -27,6 +27,7 @@
     "bootstrap:admin": "pnpm --filter @alias/api bootstrap:admin",
     "agents:sync": "node scripts/sync-agent-config.mjs",
     "agents:check": "node scripts/sync-agent-config.mjs --check",
+    "test:scripts": "pnpm --filter @alias/api exec vitest run --config ../../scripts/vitest.config.mjs",
     "prepare": "husky"
   },
   "lint-staged": {
