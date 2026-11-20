@@ -24,7 +24,7 @@
     "test": "pnpm run test:unit && pnpm run test:integration",
     "db:generate": "pnpm --filter @alias/api db:generate",
     "db:migrate": "pnpm --filter @alias/api db:migrate",
-    "db:reset": "pnpm --filter @alias/api db:reset",
+    "db:reset:schema": "pnpm --filter @alias/api db:reset:schema",
     "bootstrap:admin": "pnpm --filter @alias/api bootstrap:admin",
     "dev:doctor": "node scripts/doctor.mjs",
     "agents:sync": "node scripts/sync-agent-config.mjs",

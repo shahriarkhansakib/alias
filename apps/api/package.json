@@ -16,7 +16,7 @@
     "test:integration": "vitest run --project integration",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx src/db/migrate.ts",
-    "db:reset": "tsx src/db/reset.ts",
+    "db:reset:schema": "tsx src/db/reset-schema.ts",
     "bootstrap:admin": "tsx src/scripts/bootstrap-admin.ts"
   },
   "dependencies": {

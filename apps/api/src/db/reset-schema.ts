@@ -8,21 +8,26 @@ import { applyMigrations } from './migrate.js';
 
 const ALLOWED_LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1', '[::1]']);
 
-export function assertSafeLocalReset(databaseUrl: string, nodeEnv: string | undefined): void {
+/** Throws unless the target is a local, non-production database. */
+export function assertSafeLocalReset(
+  databaseUrl: string,
+  nodeEnv: string | undefined,
+  command = 'db:reset:schema',
+): void {
   if (nodeEnv === 'production') {
-    throw new Error('Refusing db:reset when NODE_ENV=production');
+    throw new Error(`Refusing ${command} when NODE_ENV=production`);
   }
 
   let hostname: string;
   try {
     hostname = new URL(databaseUrl).hostname.toLowerCase();
   } catch {
-    throw new Error('Refusing db:reset: DATABASE_URL is not a valid URL');
+    throw new Error(`Refusing ${command}: DATABASE_URL is not a valid URL`);
   }
 
   if (!ALLOWED_LOCAL_HOSTS.has(hostname)) {
     throw new Error(
-      `Refusing db:reset against non-local database host "${hostname}". Allowed hosts: localhost, 127.0.0.1, ::1.`,
+      `Refusing ${command} against non-local database host "${hostname}". Allowed hosts: localhost, 127.0.0.1, ::1.`,
     );
   }
 }
@@ -46,7 +51,7 @@ async function main() {
   const env = loadEnv();
   assertSafeLocalReset(env.databaseUrl, process.env.NODE_ENV ?? env.nodeEnv);
   await resetLocalDatabase(env.databaseUrl);
-  console.log('Local database reset, migrations, and mandatory seed data completed.');
+  console.log('Schema reset, migrations and mandatory seed data completed.');
 }
 
 const isEntryPoint =
@@ -55,9 +60,7 @@ const isEntryPoint =
 
 if (isEntryPoint) {
   main().catch((error) => {
-    console.error(
-      `Database reset failed: ${describeDatabaseError(error, process.env.DATABASE_URL)}`,
-    );
+    console.error(`Schema reset failed: ${describeDatabaseError(error, process.env.DATABASE_URL)}`);
     process.exit(1);
   });
 }
