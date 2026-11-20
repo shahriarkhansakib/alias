@@ -3,6 +3,7 @@ import { pathToFileURL } from 'node:url';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { loadEnv } from '../shared/env.js';
 import { createDatabase } from './client.js';
+import { describeDatabaseError } from './connection-error.js';
 import { seedSystemRoles } from './seed-roles.js';
 
 const ALLOWED_LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1', '[::1]']);
@@ -55,7 +56,9 @@ const isEntryPoint =
 
 if (isEntryPoint) {
   main().catch((error) => {
-    console.error('Database reset failed:', error instanceof Error ? error.message : error);
+    console.error(
+      `Database reset failed: ${describeDatabaseError(error, process.env.DATABASE_URL)}`,
+    );
     process.exit(1);
   });
 }

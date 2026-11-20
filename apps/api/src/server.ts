@@ -1,6 +1,7 @@
 import { serve } from '@hono/node-server';
 import { createApiApp } from './app.js';
 import { createDatabase } from './db/client.js';
+import { describeDatabaseError } from './db/connection-error.js';
 import { createNodemailerMailer } from './shared/email/nodemailer-mailer.js';
 import { loadEnv } from './shared/env.js';
 import { createLogger } from './shared/logger.js';
@@ -8,6 +9,12 @@ import { createLogger } from './shared/logger.js';
 const env = loadEnv();
 const logger = createLogger(env.logLevel, { pretty: env.nodeEnv === 'development' });
 const database = createDatabase(env.databaseUrl);
+// Fail loudly but keep serving: the pool reconnects on demand once Postgres is up.
+database.ping().catch((error: unknown) => {
+  logger.error(
+    `${describeDatabaseError(error, env.databaseUrl)} The API keeps running and connects once Postgres is up.`,
+  );
+});
 const mailer = createNodemailerMailer({
   host: env.smtpHost,
   port: env.smtpPort,

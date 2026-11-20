@@ -3,6 +3,7 @@ import { pathToFileURL } from 'node:url';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { loadEnv } from '../shared/env.js';
 import { createDatabase } from './client.js';
+import { describeDatabaseError } from './connection-error.js';
 import { seedSystemRoles } from './seed-roles.js';
 
 export async function runMigrations(databaseUrl: string): Promise<void> {
@@ -29,7 +30,7 @@ const isEntryPoint =
 
 if (isEntryPoint) {
   main().catch((error) => {
-    console.error('Migration failed:', error);
+    console.error(`Migration failed: ${describeDatabaseError(error, process.env.DATABASE_URL)}`);
     process.exit(1);
   });
 }

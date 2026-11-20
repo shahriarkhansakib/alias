@@ -1,4 +1,5 @@
 import { createDatabase } from '../db/client.js';
+import { describeDatabaseError } from '../db/connection-error.js';
 import { createDrizzleAuthUserLookup } from '../modules/authn/infrastructure/user-lookup-repository.js';
 import { createAuthzInfrastructure } from '../modules/authz/index.js';
 import { createBootstrapSuperAdminUseCase } from '../modules/platform-admin/index.js';
@@ -44,6 +45,8 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error('Super admin bootstrap failed:', error instanceof Error ? error.message : error);
+  console.error(
+    `Super admin bootstrap failed: ${describeDatabaseError(error, process.env.DATABASE_URL)}`,
+  );
   process.exit(1);
 });
