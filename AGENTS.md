@@ -73,9 +73,17 @@ and report the results honestly — including failures.
 
 ## Testing
 
-Every API test suite is organised in three clearly separated sections, in this order:
-**happy paths**, then **edge cases**, then **error cases** (`describe` blocks with those names).
-Use the `api-test-suite` skill. Integration tests use a real Postgres, not mocks.
+Every **new or changed** test suite has three clearly separated sections, in this order:
+**happy paths**, then **edge cases**, then **error cases**:
+
+- Vitest (API, scripts): `describe('happy paths')`, `describe('edge cases')`,
+  `describe('error cases')`.
+- Playwright (`apps/web/e2e/`): `test.describe('happy paths')`, and so on.
+
+Suites written before this rule are known exceptions and are moved to the three sections when they
+are next changed. API unit tests (`*.unit.test.ts`) sit next to the code; API integration tests
+(`*.integration.test.ts`) live in `apps/api/src/test/` and use a real Postgres, not mocks. Use the
+`api-test-suite` skill.
 
 ## Git
 
