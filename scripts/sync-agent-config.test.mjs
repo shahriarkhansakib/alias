@@ -112,9 +112,41 @@ describe('sync-agent-config', () => {
       );
       expect(check().status).toBe(0);
     });
+
+    it('removes the empty folders of a deleted skill but keeps .claude/skills', () => {
+      write('.agents/skills/other/SKILL.md', '---\nname: other\ndescription: Other.\n---\n');
+      write('.agents/skills/demo/assets/img/logo.png', BINARY);
+      sync();
+      fs.rmSync(path.join(repo, '.agents/skills/demo'), { recursive: true });
+
+      expect(sync().status).toBe(0);
+      expect(has('.claude/skills/demo')).toBe(false);
+      expect(has('.claude/skills/other/SKILL.md')).toBe(true);
+      expect(check().status).toBe(0);
+    });
   });
 
   describe('edge cases', () => {
+    it('keeps a skill folder that still holds generated files', () => {
+      write('.agents/skills/demo/assets/logo.png', BINARY);
+      sync();
+      fs.rmSync(path.join(repo, '.agents/skills/demo/assets'), { recursive: true });
+
+      expect(sync().status).toBe(0);
+      expect(has('.claude/skills/demo/assets')).toBe(false);
+      expect(has('.claude/skills/demo/SKILL.md')).toBe(true);
+    });
+
+    it('never removes the .claude/rules or .claude/skills roots, even when empty', () => {
+      sync();
+      fs.rmSync(path.join(repo, '.agents/rules'), { recursive: true });
+      fs.rmSync(path.join(repo, '.agents/skills'), { recursive: true });
+
+      expect(sync().status).toBe(0);
+      expect(fs.readdirSync(path.join(repo, '.claude/rules'))).toEqual([]);
+      expect(fs.readdirSync(path.join(repo, '.claude/skills'))).toEqual([]);
+    });
+
     it('strips a UTF-8 BOM from a source rule and skill', () => {
       write('.agents/rules/web.md', BOM + globRule('globs: "apps/web/**"'));
       write('.agents/skills/demo/SKILL.md', `${BOM}---\nname: demo\ndescription: Demo.\n---\n`);
@@ -199,6 +231,18 @@ describe('sync-agent-config', () => {
       }
       expect(read('.claude/rules/mine.md')).toBe('# Mine\n');
       expect(has('.claude/skills/personal/SKILL.md')).toBe(true);
+    });
+
+    it('keeps a stale skill folder that holds a hand-written file', () => {
+      sync();
+      write('.claude/skills/demo/notes.md', '# Mine\n');
+      fs.rmSync(path.join(repo, '.agents/skills/demo'), { recursive: true });
+
+      const result = sync();
+      expect(result.status).toBe(1);
+      expect(result.out).toContain('.claude/skills/demo/notes.md was not generated');
+      expect(has('.claude/skills/demo/SKILL.md')).toBe(false);
+      expect(read('.claude/skills/demo/notes.md')).toBe('# Mine\n');
     });
 
     it('fails --check when a generated file was edited by hand', () => {

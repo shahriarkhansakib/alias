@@ -154,6 +154,21 @@ function walk(relDir) {
   });
 }
 
+/**
+ * After deleting `rel`, removes its parent folders while they are empty, but only folders strictly
+ * inside .claude/rules or .claude/skills (never those roots, never anything elsewhere).
+ */
+function removeEmptyParents(rel) {
+  const root = [CLAUDE_RULES, CLAUDE_SKILLS].find((r) => rel.startsWith(`${r}/`));
+  if (!root) return;
+  for (let dir = path.posix.dirname(rel); dir !== root && dir.startsWith(`${root}/`); ) {
+    if (fs.readdirSync(abs(dir)).length > 0) return;
+    fs.rmdirSync(abs(dir));
+    console.log(`removed ${dir}/`);
+    dir = path.posix.dirname(dir);
+  }
+}
+
 // 1. CLAUDE.md next to every AGENTS.md
 const claudeExtra = exists(CLAUDE_EXTRA_SRC) ? readText(CLAUDE_EXTRA_SRC) : '';
 for (const agentsFile of gitListFiles(['AGENTS.md']).filter((f) => !f.startsWith('.agents/'))) {
@@ -250,6 +265,7 @@ for (const rel of previousManifest) {
   } else {
     fs.rmSync(abs(rel));
     console.log(`removed ${rel}`);
+    removeEmptyParents(rel);
   }
 }
 
