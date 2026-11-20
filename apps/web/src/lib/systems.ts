@@ -1,16 +1,27 @@
+/**
+ * The three Alias systems, reached through the single gateway on this app's own origin
+ * (see next.config.ts rewrites and src/proxy.ts). No other port is ever shown to users.
+ */
+
 export interface AliasSystem {
   id: 's1' | 's2' | 's3';
   step: string;
   name: string;
   summary: string;
   points: string[];
-  url: string;
 }
 
-/**
- * The three Alias systems run as separate apps (see systems/README.md).
- * Override their addresses with ALIAS_S1_URL, ALIAS_S2_URL and ALIAS_S3_URL.
- */
+export interface AdminSystemLink {
+  id: string;
+  system: string;
+  name: string;
+  description: string;
+  href: string;
+}
+
+/** Where a client starts a conversation with Alias (System 1 client chat). */
+export const CLIENT_CHAT_HREF = '/intake/campaign/new';
+
 export function getAliasSystems(): AliasSystem[] {
   return [
     {
@@ -24,7 +35,6 @@ export function getAliasSystems(): AliasSystem[] {
         'Operator console with AI-drafted replies',
         'Locked, versioned campaign brief',
       ],
-      url: process.env.ALIAS_S1_URL ?? 'http://localhost:3005',
     },
     {
       id: 's2',
@@ -37,7 +47,6 @@ export function getAliasSystems(): AliasSystem[] {
         'Claims and prices locked to confirmed facts',
         'Automatic size, contrast and layout checks',
       ],
-      url: process.env.ALIAS_S2_URL ?? 'http://localhost:3001',
     },
     {
       id: 's3',
@@ -49,7 +58,39 @@ export function getAliasSystems(): AliasSystem[] {
         'Reach, engagement and click analytics',
         'Every post ID mapped and stored',
       ],
-      url: process.env.ALIAS_S3_URL ?? 'http://localhost:5173',
+    },
+  ];
+}
+
+export function getAdminSystemLinks(): AdminSystemLink[] {
+  return [
+    {
+      id: 's1-campaigns',
+      system: 'System 1',
+      name: 'Campaigns & briefs',
+      description: 'Review intake campaigns and confirm Artifact-1 briefs.',
+      href: '/intake/admin',
+    },
+    {
+      id: 's1-inbox',
+      system: 'System 1',
+      name: 'Client inbox',
+      description: 'Live client conversations with AI-drafted replies.',
+      href: '/intake/admin/communication',
+    },
+    {
+      id: 's2-studio',
+      system: 'System 2',
+      name: 'Creative studio',
+      description: 'Turn a brief into angles, copy and finished ads.',
+      href: '/studio',
+    },
+    {
+      id: 's3-publish',
+      system: 'System 3',
+      name: 'Publishing & analytics',
+      description: 'Publish approved ads and track their results.',
+      href: '/publish',
     },
   ];
 }

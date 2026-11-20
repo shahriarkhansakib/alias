@@ -167,7 +167,7 @@ export default function SocialAccountsPage() {
     setFeedback('');
 
     try {
-      const redirectUrl = `${window.location.origin}/accounts`;
+      const redirectUrl = `${window.location.origin}${import.meta.env.BASE_URL}accounts`;
       const res = await apiService.getConnectUrl(platformId, redirectUrl);
 
       if (res?.authUrl) {

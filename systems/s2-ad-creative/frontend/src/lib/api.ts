@@ -28,7 +28,7 @@ import {
 } from './types';
 import { getAuthHeaders, authFetch } from './auth';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/svc/creative';
 
 export async function fetchHealth(): Promise<{ data?: SystemHealthResponse; error?: string; latencyMs: number }> {
   const start = performance.now();

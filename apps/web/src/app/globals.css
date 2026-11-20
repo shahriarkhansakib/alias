@@ -558,3 +558,16 @@ p {
   padding: 1.5rem;
   border-top: 1px solid var(--border);
 }
+
+.system-link {
+  display: flex;
+  border: 1px solid var(--border);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.system-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.12);
+}

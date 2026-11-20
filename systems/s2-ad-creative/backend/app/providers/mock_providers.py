@@ -1,5 +1,5 @@
 import io
-from typing import Any, Dict, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from PIL import Image, ImageDraw
 from app.providers.base import LLMStrategyProvider, ImageGenProvider, VisionQAProvider
 from app.schemas.brief import FinalAdBriefPayload

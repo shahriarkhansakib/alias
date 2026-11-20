@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation';
+import { AdminSystemsSection } from '@/components/admin-systems-section';
 import { MfaEnrollmentGate } from '@/components/mfa-enrollment-gate';
 import { PlatformAdminPanel } from '@/components/platform-admin-panel';
 import { SignOutButton } from '@/components/sign-out-button';
@@ -63,6 +64,7 @@ export default async function AdminPage() {
       initialAdmins={adminsResponse.admins}
       initialRequirePlatformMfa={accessContext.requirePlatformMfa}
       initialPersonalMfaEnabled={accessContext.user.mfaEnabled}
+      systemsSection={<AdminSystemsSection />}
     />
   );
 }
