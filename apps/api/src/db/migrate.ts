@@ -1,18 +1,26 @@
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import type { NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { loadEnv } from '../shared/env.js';
 import { createDatabase } from './client.js';
 import { describeDatabaseError } from './connection-error.js';
-import { seedSystemRoles } from './seed-roles.js';
+import { seedMandatoryData } from './mandatory-seeds.js';
 
+export const MIGRATIONS_FOLDER = path.resolve(import.meta.dirname, '../../drizzle');
+
+/** Applies every pending migration from apps/api/drizzle. */
+export async function applyMigrations(db: NodePgDatabase<Record<string, unknown>>): Promise<void> {
+  await migrate(db, { migrationsFolder: MIGRATIONS_FOLDER });
+}
+
+/** Applies pending migrations, then the mandatory seed data. */
 export async function runMigrations(databaseUrl: string): Promise<void> {
   const database = createDatabase(databaseUrl);
-  const migrationsFolder = path.resolve(import.meta.dirname, '../../drizzle');
 
   try {
-    await migrate(database.db, { migrationsFolder });
-    await seedSystemRoles(database.db);
+    await applyMigrations(database.db);
+    await seedMandatoryData(database.db);
   } finally {
     await database.close();
   }
@@ -21,7 +29,7 @@ export async function runMigrations(databaseUrl: string): Promise<void> {
 async function main() {
   const env = loadEnv();
   await runMigrations(env.databaseUrl);
-  console.log('Database migrations and system role seed completed.');
+  console.log('Database migrations and mandatory seed data completed.');
 }
 
 const isEntryPoint =

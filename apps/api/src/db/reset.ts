@@ -1,10 +1,10 @@
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { loadEnv } from '../shared/env.js';
 import { createDatabase } from './client.js';
 import { describeDatabaseError } from './connection-error.js';
-import { seedSystemRoles } from './seed-roles.js';
+import { seedMandatoryData } from './mandatory-seeds.js';
+import { applyMigrations } from './migrate.js';
 
 const ALLOWED_LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1', '[::1]']);
 
@@ -30,14 +30,13 @@ export function assertSafeLocalReset(databaseUrl: string, nodeEnv: string | unde
 export async function resetLocalDatabase(databaseUrl: string): Promise<void> {
   assertSafeLocalReset(databaseUrl, process.env.NODE_ENV);
   const database = createDatabase(databaseUrl);
-  const migrationsFolder = path.resolve(import.meta.dirname, '../../drizzle');
 
   try {
     await database.pool.query('DROP SCHEMA IF EXISTS drizzle CASCADE');
     await database.pool.query('DROP SCHEMA IF EXISTS public CASCADE');
     await database.pool.query('CREATE SCHEMA public');
-    await migrate(database.db, { migrationsFolder });
-    await seedSystemRoles(database.db);
+    await applyMigrations(database.db);
+    await seedMandatoryData(database.db);
   } finally {
     await database.close();
   }
@@ -47,7 +46,7 @@ async function main() {
   const env = loadEnv();
   assertSafeLocalReset(env.databaseUrl, process.env.NODE_ENV ?? env.nodeEnv);
   await resetLocalDatabase(env.databaseUrl);
-  console.log('Local database reset, migrations, and system role seed completed.');
+  console.log('Local database reset, migrations, and mandatory seed data completed.');
 }
 
 const isEntryPoint =
