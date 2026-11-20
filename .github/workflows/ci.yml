@@ -103,4 +103,5 @@ jobs:
         run: pnpm --filter @alias/web exec playwright install chromium --with-deps
 
       - name: Run Playwright E2E tests
+        timeout-minutes: 10
         run: pnpm test:e2e
