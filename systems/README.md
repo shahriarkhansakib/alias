@@ -19,9 +19,9 @@ The platform (`apps/web`, `apps/api`) provides authentication, 2FA, roles, admin
 | Platform web (`apps/web`) | 3000 | `pnpm dev` at repo root |
 | Platform API (`apps/api`) | 4000 | `pnpm dev` at repo root |
 | System 1 (Next.js) | 3005 | `npm install && npm run dev -- -p 3005` |
-| System 2 API (FastAPI) | 8000 | `uvicorn app.main:app --reload --app-dir backend --port 8000` |
+| System 2 API (FastAPI) | 8000 | `cd backend`, activate venv, `alembic upgrade head`, then `uvicorn app.main:app --reload --port 8000` (run from `backend/` so it reads `backend/.env`) |
 | System 2 web (Next.js) | 3001 | `cd frontend && npm install && npm run dev -- -p 3001` |
-| System 3 API (Express) | 3002 | `cd Backend && npm install && npm run dev` (with `PORT=3002`) |
+| System 3 API (Express) | 3002 | `cd Backend && npm install && npx ts-node src/db/migrate.ts && npm run dev` (with `PORT=3002` in `Backend/.env`) |
 | System 3 web (Vite) | 5173 | `cd Frontend && npm install && npm run dev` |
 
 ## Environment files
