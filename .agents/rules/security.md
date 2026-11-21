@@ -1,0 +1,20 @@
+---
+trigger: always_on
+description: "Secrets, environment files and destructive commands."
+---
+
+# Security
+
+- Never read, print, copy or commit any env file other than `.env.example` (`.env`, `.env.local`,
+  `.env.development`, `.env.test`, `.env.staging`, `.env.production` and their `.local` forms) or
+  any other file holding secrets. Learn which variables exist from `.env.example`.
+- Never hard-code keys, tokens, passwords or connection strings in code, tests, fixtures or logs.
+  Read them from the environment through the existing config loader.
+- Never log personal data (emails, phone numbers, chat content) at `info` level or above.
+- Ask before running anything destructive or irreversible: `pnpm db:reset` (deletes the local
+  Docker volume; never add `--yes` without approval), `pnpm db:reset:schema`,
+  `docker compose down -v`, dropping tables,
+  `rm -rf`, deleting branches, or any command against a non-local database.
+- Never force-push, never push to `main`, never rewrite pushed history, never merge pull requests.
+  Push only to `phase-zero`, after the `pre-pr-check` skill passes.
+- Never weaken authentication, authorization, rate limiting or 2FA to make a test pass.

@@ -57,7 +57,10 @@ export default defineConfig({
       },
     },
     {
-      command: `pnpm exec next start -p ${webPort}`,
+      // Run Next directly, not through `pnpm exec`: on Linux `pnpm exec` exits at once and leaves
+      // next-server orphaned in another process group, so Playwright cannot stop it at teardown
+      // and waits forever for its output pipes (the CI E2E hang).
+      command: `node node_modules/next/dist/bin/next start -p ${webPort}`,
       url: webOrigin,
       reuseExistingServer: false,
       timeout: 60_000,

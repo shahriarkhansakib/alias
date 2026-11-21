@@ -26,7 +26,16 @@ export const REDACT_PATHS = [
 
 export type Logger = pino.Logger;
 
-export function createLogger(level = 'info'): Logger {
+export interface LoggerOptions {
+  /** Human-readable single-line output (development only). Default: JSON lines. */
+  pretty?: boolean;
+}
+
+/**
+ * JSON lines in production and test. With `pretty`, pino-pretty prints one coloured line per
+ * entry: `HH:MM:ss.l LEVEL [requestId] message {other fields}`. Redaction applies either way.
+ */
+export function createLogger(level = 'info', options: LoggerOptions = {}): Logger {
   return pino({
     level,
     base: {
@@ -37,5 +46,19 @@ export function createLogger(level = 'info'): Logger {
       censor: '[REDACTED]',
     },
     timestamp: pino.stdTimeFunctions.isoTime,
+    ...(options.pretty
+      ? {
+          transport: {
+            target: 'pino-pretty',
+            options: {
+              colorize: true,
+              translateTime: 'SYS:HH:MM:ss.l',
+              singleLine: true,
+              ignore: 'pid,hostname,service,requestId',
+              messageFormat: '{if requestId}[{requestId}] {end}{msg}',
+            },
+          },
+        }
+      : {}),
   });
 }

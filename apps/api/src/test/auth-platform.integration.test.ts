@@ -2,7 +2,7 @@ import { desc, eq } from 'drizzle-orm';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { createApiApp } from '../app.js';
 import { createDatabase } from '../db/client.js';
-import { resetLocalDatabase } from '../db/reset.js';
+import { resetLocalDatabase } from '../db/reset-schema.js';
 import {
   account,
   auditLogs,

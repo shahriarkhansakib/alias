@@ -1,17 +1,29 @@
 import tseslint from 'typescript-eslint';
 
+/**
+ * Every module under apps/api/src/modules/. Add a new module here so the boundary rules below
+ * cover it. `authn` is the foundation: it may import no other module.
+ */
+export const MODULES = ['authn', 'authz', 'platform-admin'];
+
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+/** Regex alternation group matching any of the given module names, e.g. `(?:authn|authz)`. */
+const anyOf = (names) => `(?:${names.map(escapeRegex).join('|')})`;
+
+const MODULE_NAMES = anyOf(MODULES);
+const NON_AUTHN_MODULES = MODULES.filter((name) => name !== 'authn');
+
 const crossModuleInternalPatterns = [
   {
-    regex:
-      '^(?:\\.\\./){2,}(?:authn|authz|platform-admin)/(?:domain|application|infrastructure|http)(?:/|$)',
+    regex: `^(?:\\.\\./){2,}${MODULE_NAMES}/(?:domain|application|infrastructure|http)(?:/|$)`,
     message: 'Cross-module imports must go through the target module index.ts barrel.',
   },
 ];
 
 const authnForbiddenCrossModulePatterns = [
   {
-    regex: '(?:^|/)(?:authz|platform-admin)(?:/|$)',
-    message: 'modules/authn must never import modules/authz or modules/platform-admin.',
+    regex: `(?:^|/)${anyOf(NON_AUTHN_MODULES)}(?:/|$)`,
+    message: `modules/authn must never import ${NON_AUTHN_MODULES.map((name) => `modules/${name}`).join(' or ')}.`,
   },
 ];
 
@@ -58,13 +70,12 @@ const applicationForbiddenPatterns = [
 
 const schemaForbiddenPatterns = [
   {
-    regex: '^(?:\\.\\./){2,}(?:authn|authz|platform-admin)/(?:domain|application|http)(?:/|$)',
+    regex: `^(?:\\.\\./){2,}${MODULE_NAMES}/(?:domain|application|http)(?:/|$)`,
     message:
       'Drizzle schema files may only import another module infrastructure/schema.ts for SQL FK DDL.',
   },
   {
-    regex:
-      '^(?:\\.\\./){2,}(?:authn|authz|platform-admin)/infrastructure/(?!schema(?:\\.js|\\.ts)?$)',
+    regex: `^(?:\\.\\./){2,}${MODULE_NAMES}/infrastructure/(?!schema(?:\\.js|\\.ts)?$)`,
     message: 'Drizzle schema files may only import schema.ts from another module infrastructure.',
   },
 ];

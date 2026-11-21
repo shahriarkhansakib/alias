@@ -59,8 +59,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 12
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -79,6 +77,12 @@ jobs:
 
       - name: Lint architectural boundaries
         run: pnpm lint:arch
+
+      - name: Check agent config is in sync
+        run: pnpm agents:check
+
+      - name: Test repository scripts
+        run: pnpm test:scripts
 
       - name: Typecheck
         run: pnpm typecheck
@@ -99,4 +103,5 @@ jobs:
         run: pnpm --filter @alias/web exec playwright install chromium --with-deps
 
       - name: Run Playwright E2E tests
+        timeout-minutes: 10
         run: pnpm test:e2e

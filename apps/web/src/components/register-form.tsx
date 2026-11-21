@@ -1,9 +1,81 @@
 'use client';
 
 import Link from 'next/link';
-import { type FormEvent, useState } from 'react';
+import { type FormEvent, useEffect, useState } from 'react';
 import { authClient } from '@/lib/auth-client';
 import { PasswordInput } from './password-input';
+
+/** Seconds before "Send again" becomes available, after sign-up and after each resend. */
+const RESEND_COOLDOWN_SECONDS = 30;
+
+/**
+ * Shown after sign-up. The email is sent in the background, so this page never knows whether
+ * delivery worked; it shows the same message for everyone and offers to send the link again.
+ * Delivery failures are logged by the API.
+ */
+function CheckYourEmail({ email }: { email: string }) {
+  // A deadline rather than a decrementing counter, so the countdown stays right even when the
+  // browser throttles timers in a background tab.
+  const [availableAt, setAvailableAt] = useState(() => Date.now() + RESEND_COOLDOWN_SECONDS * 1000);
+  const [now, setNow] = useState(() => Date.now());
+  const [isSending, setIsSending] = useState(false);
+  const [resendNote, setResendNote] = useState<string | null>(null);
+  const secondsLeft = Math.max(0, Math.ceil((availableAt - now) / 1000));
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  async function handleResend() {
+    setIsSending(true);
+    setResendNote(null);
+    try {
+      const result = await authClient.sendVerificationEmail({ email, callbackURL: '/dashboard' });
+      setResendNote(
+        result.error
+          ? 'We could not send another link right now. Please try again in a moment.'
+          : 'We sent another link. It can take a minute to arrive.',
+      );
+    } catch {
+      setResendNote('We could not send another link right now. Please try again in a moment.');
+    } finally {
+      setIsSending(false);
+      setAvailableAt(Date.now() + RESEND_COOLDOWN_SECONDS * 1000);
+      setNow(Date.now());
+    }
+  }
+
+  return (
+    <div className="banner banner-success stack-sm" role="status">
+      <strong>Check your email</strong>
+      <span>
+        We sent a verification link to <span className="mono">{email}</span>. Open the link to
+        verify your address and continue.
+      </span>
+      <span className="small">Didn&apos;t get it? Check your spam folder, or send it again.</span>
+      <div>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={handleResend}
+          disabled={isSending || secondsLeft > 0}
+        >
+          {isSending
+            ? 'Sending…'
+            : secondsLeft > 0
+              ? `Send again (available in ${secondsLeft} s)`
+              : 'Send again'}
+        </button>
+      </div>
+      {resendNote ? (
+        <span className="small" aria-live="polite">
+          {resendNote}
+        </span>
+      ) : null}
+    </div>
+  );
+}
 
 export function RegisterForm() {
   const [name, setName] = useState('');
@@ -55,13 +127,7 @@ export function RegisterForm() {
       </div>
 
       {submittedEmail ? (
-        <div className="banner banner-success stack-sm" role="status">
-          <strong>Check your email</strong>
-          <span>
-            We sent a verification link to <span className="mono">{submittedEmail}</span>. Open the
-            link to verify your address and continue.
-          </span>
-        </div>
+        <CheckYourEmail email={submittedEmail} />
       ) : (
         <form className="stack-md" onSubmit={handleSubmit}>
           {errorMessage ? (

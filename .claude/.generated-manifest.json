@@ -1,0 +1,23 @@
+{
+  "generatedBy": "scripts/sync-agent-config.mjs",
+  "files": [
+    ".claude/rules/api-modules.md",
+    ".claude/rules/contracts.md",
+    ".claude/rules/database.md",
+    ".claude/rules/security.md",
+    ".claude/rules/testing.md",
+    ".claude/rules/web.md",
+    ".claude/skills/api-test-suite/SKILL.md",
+    ".claude/skills/db-migration/SKILL.md",
+    ".claude/skills/new-api-module/SKILL.md",
+    ".claude/skills/pre-pr-check/SKILL.md",
+    ".claude/skills/write-adr/SKILL.md",
+    "CLAUDE.md",
+    "apps/api/CLAUDE.md",
+    "apps/api/src/modules/authn/CLAUDE.md",
+    "apps/api/src/modules/authz/CLAUDE.md",
+    "apps/api/src/modules/platform-admin/CLAUDE.md",
+    "apps/web/CLAUDE.md",
+    "packages/contracts/CLAUDE.md"
+  ]
+}

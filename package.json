@@ -7,7 +7,8 @@
     "node": ">=22.14.0"
   },
   "scripts": {
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --output-logs=new-only",
+    "dev:stream": "turbo run dev --ui=stream --output-logs=new-only",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "lint:biome": "biome lint .",
@@ -24,7 +25,12 @@
     "db:generate": "pnpm --filter @alias/api db:generate",
     "db:migrate": "pnpm --filter @alias/api db:migrate",
     "db:reset": "pnpm --filter @alias/api db:reset",
+    "db:reset:schema": "pnpm --filter @alias/api db:reset:schema",
     "bootstrap:admin": "pnpm --filter @alias/api bootstrap:admin",
+    "dev:doctor": "node scripts/doctor.mjs",
+    "agents:sync": "node scripts/sync-agent-config.mjs",
+    "agents:check": "node scripts/sync-agent-config.mjs --check",
+    "test:scripts": "vitest run --config scripts/vitest.config.mjs",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -40,6 +46,7 @@
     "lint-staged": "^17.6.1",
     "turbo": "^2.11.13",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.73.0"
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
   }
 }

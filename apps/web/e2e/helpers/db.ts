@@ -18,7 +18,7 @@ function runPnpm(args: string[]): void {
 }
 
 export function resetDatabaseForE2e(): void {
-  runPnpm(['--filter', '@alias/api', 'db:reset']);
+  runPnpm(['--filter', '@alias/api', 'db:reset:schema']);
 }
 
 export function bootstrapSuperAdminForE2e(email: string): void {

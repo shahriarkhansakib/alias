@@ -18,7 +18,11 @@
       "!**/test-results",
       "!apps/api/drizzle",
       "!pnpm-lock.yaml",
-      "!**/next-env.d.ts"
+      "!**/next-env.d.ts",
+      "!**/.agents",
+      "!**/.claude",
+      "!**/AGENTS.md",
+      "!**/CLAUDE.md"
     ]
   },
   "formatter": {
