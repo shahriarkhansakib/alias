@@ -7,12 +7,24 @@ Alias plans a campaign with the client in a chat, turns the client's **real prod
 platform-ready ads, publishes them to the client's Facebook page and tracks what sells. Three AI
 systems work behind **one address**, with a human operator approving every decision that matters.
 
-|                                   |                                          |
-| --------------------------------- | ---------------------------------------- |
-| **Live app**                      | https://alias-sand.vercel.app            |
-| **UI prototype**                  | https://munirakhondoker.github.io/alias/ |
-| **Demo — client**                 | `demo@alias.local` / `AliasDemo#2026!`   |
-| **Demo — operator (super admin)** | `admin@alias.local` / `AliasAdmin#2026!` |
+|                       |                                                                                                |
+| --------------------- | ---------------------------------------------------------------------------------------------- |
+| **Demo video (2:44)** | https://youtu.be/FIidB3WJNVc                                                                   |
+| **Live site**         | https://alias-sand.vercel.app                                                                  |
+| **UI prototype**      | https://munirakhondoker.github.io/alias/                                                       |
+| **Source code**       | This repository; Systems 1–3 live in [`systems/`](systems) with their full Git history         |
+| **Demo accounts**     | Created by `pnpm seed:demo` when you [run it locally](#run-it-locally-one-address-one-command) |
+
+## At a glance for evaluators
+
+| What you are looking for                    | Where to find it                                                                                                           |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| The customer and the problem                | [The problem](#the-problem)                                                                                                |
+| What the MVP does today                     | [MVP scope](#mvp-scope) and the demo video, which walks through all three systems end to end                               |
+| How AI is used, step by step                | [AI approach](#ai-approach-input--ai--output)                                                                              |
+| How data is collected, stored and protected | [Data lifecycle](#data-lifecycle)                                                                                          |
+| Safety and human oversight                  | [Responsible AI](#ai-approach-input--ai--output) and [System guarantees](#the-solution-three-systems-one-gateway-one-rule) |
+| Who built what                              | [Team](#team) and `git log -- systems/`                                                                                    |
 
 ## The problem
 
@@ -47,6 +59,33 @@ flowchart LR
 | **3 · Publish & measure** (`systems/s3-publish`)           | Publishes approved posts to the client's Facebook page through the Zernio API, maps every post ID and shows reach, impressions, reactions, comments, shares and clicks.                                                                                                          | API keys server-side only; three IDs stored per post; `no_data_yet` instead of fake zeros.                                                    |
 | **Platform** (`apps/web`, `apps/api`)                      | One gateway on one URL: clients get only the chat; operators get the **Systems & agents** console.                                                                                                                                                                               | Better Auth, email verification, TOTP 2FA, server-side RBAC, audit logs.                                                                      |
 
+## MVP scope
+
+The MVP runs the full campaign loop on real inputs, as shown in the demo video:
+
+1. **Intake (System 1):** a client chats in Bangla, Banglish or English; the AI consultant gathers
+   the facts it needs, and the conversation becomes a versioned brief that an operator reviews and
+   approves.
+2. **Creative (System 2):** from the approved brief, the agents plan angles and copy; the engine
+   places the client's real product photo on an AI-generated background and scores the result on
+   a QA scorecard before an operator approves it.
+3. **Publish and measure (System 3):** the approved post goes live on the client's Facebook page,
+   and reach, engagement, reactions and clicks are tracked per post.
+
+Each system runs as its own service behind the platform's role-based gateway. Bringing all three
+under one login, one database and one campaign state machine is the next milestone (see
+[Impact and roadmap](#impact-and-roadmap)).
+
+## Data lifecycle
+
+| Stage       | What happens                                                                                                                                                                                             |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Collect** | Client chat messages, uploaded product photos, facts the client confirms, and post metrics returned by the publishing API.                                                                               |
+| **Store**   | Platform accounts, roles and audit logs in PostgreSQL; each system keeps its own records (System 1: conversations and briefs; System 2: creative jobs and assets; System 3: posts and metric snapshots). |
+| **Use**     | Only to produce and measure that client's campaign. Client-confirmed facts are stored apart from AI research, and ad claims must trace back to confirmed facts. Client data is not used to train models. |
+| **Protect** | Passwords hashed by Better Auth; email verification; TOTP 2FA for administrators; server-side role checks; API keys kept server-side; every admin action written to an audit log.                        |
+| **Improve** | Post results feed the next campaign's plan (learning loop on the roadmap).                                                                                                                               |
+
 ## AI approach (input → AI → output)
 
 | Step        | Input                                                  | AI                                                                        | Output                                            |
@@ -71,7 +110,7 @@ ads approved without rework**.
 
 Next: paid boosting under a hard spend cap (Zernio Ads API) · a learning loop where the winning
 angle and budget split feed the next run · one login, one database and one campaign state machine
-for all three systems · Bangla-first ad typography.
+for all three systems · Bangla-first ad typography · client-controlled data export and deletion with clear retention windows.
 
 ## Team
 
