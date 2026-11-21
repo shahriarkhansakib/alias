@@ -1,8 +1,8 @@
 {
   "crons": [
     {
-      "path": "/api/admin/communication/cron",
-      "schedule": "* * * * *"
+      "path": "/intake/api/admin/communication/cron",
+      "schedule": "0 3 * * *"
     }
   ]
 }
