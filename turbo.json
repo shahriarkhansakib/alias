@@ -23,7 +23,12 @@
     "CI",
     "ALIAS_S1_URL",
     "ALIAS_S2_URL",
-    "ALIAS_S3_URL"
+    "ALIAS_S3_URL",
+    "ALIAS_S1_INTERNAL_URL",
+    "ALIAS_S2_WEB_INTERNAL_URL",
+    "ALIAS_S2_API_INTERNAL_URL",
+    "ALIAS_S3_WEB_INTERNAL_URL",
+    "ALIAS_S3_API_INTERNAL_URL"
   ],
   "tasks": {
     "build": {
